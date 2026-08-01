@@ -1,0 +1,1992 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Arena - Sports App</title>
+<style>
+:root{--bg:#070910;--panel:#111724;--panel2:#171f2f;--line:#29344c;--text:#f7f8fc;--muted:#9ca9bd;--blue:#4f9dff;--purple:#7c5cff;--gold:#ffc93c;--shadow:0 24px 70px #0007}*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--text);font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 10% 0,#4f9dff22,transparent 32%),radial-gradient(circle at 90% 0,#7c5cff20,transparent 29%),var(--bg)}button,input{font:inherit}button{cursor:pointer}.hidden{display:none!important}header{position:sticky;top:0;z-index:9;background:#070910e8;border-bottom:1px solid #ffffff12;backdrop-filter:blur(18px)}.head{width:min(1450px,calc(100% - 30px));min-height:80px;margin:auto;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:13px}.logo{width:52px;height:52px;filter:drop-shadow(0 10px 18px #4f9dff44)}h1{font-size:1.05rem;letter-spacing:.14em;margin:0}.tag{color:var(--muted);font-size:.79rem;margin-top:3px}.actions{display:flex;gap:8px}.btn{border:1px solid var(--line);background:var(--panel);color:white;border-radius:10px;padding:10px 13px;font-weight:800}.btn:hover{border-color:var(--blue)}main{width:min(1450px,calc(100% - 30px));margin:auto;padding:34px 0 65px}.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:20px;margin-bottom:26px}.hero>div{border:1px solid var(--line);border-radius:26px;background:linear-gradient(145deg,#121827fa,#0b0f19fa);box-shadow:var(--shadow);padding:34px}.eyebrow{font-size:.75rem;color:#78b8ff;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.hero h2{font-size:clamp(2.5rem,6vw,5.4rem);line-height:.94;margin:13px 0 17px}.hero h2 span{color:#927cff}.hero p{color:var(--muted);line-height:1.65;max-width:760px}.stat{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}.stat span{color:var(--muted)}.search{width:100%;border:1px solid var(--line);border-radius:16px;background:#0d121d;color:white;padding:16px 18px;margin-bottom:18px;outline:0}.search:focus{border-color:var(--blue);box-shadow:0 0 0 4px #4f9dff18}.crumbs{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin-bottom:17px}.crumb{border:0;background:transparent;color:var(--muted);padding:3px;font-weight:750}.crumb:hover,.crumb.current{color:white}.sep{color:#536079}.heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:14px}.heading h2{margin:0}.heading p{color:var(--muted);margin:5px 0 0}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.card{position:relative;min-height:180px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,var(--panel),#0c121c);padding:19px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:var(--accent);background:var(--panel2)}.card:after{content:"";position:absolute;width:120px;height:120px;border:27px solid color-mix(in srgb,var(--accent) 14%,transparent);border-radius:50%;right:-58px;top:-55px}.top{position:relative;z-index:2;display:flex;justify-content:space-between}.icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:color-mix(in srgb,var(--accent) 20%,#101620);font-weight:950}.star{position:relative;z-index:3;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#090d15;color:#657187;font-size:1.22rem}.star:hover,.star.on{color:var(--gold);border-color:var(--gold);background:#ffc93c12}.card h3{position:relative;z-index:2;margin:18px 0 6px}.card p{position:relative;z-index:2;color:var(--muted);font-size:.86rem}.open{position:absolute;left:19px;bottom:16px;z-index:2;font-size:.8rem;font-weight:850}.favWrap{margin-bottom:24px}.favList{display:flex;gap:9px;overflow:auto}.favChip{flex:0 0 auto;border:1px solid #ffc93c55;background:#ffc93c12;color:white;border-radius:12px;padding:11px 13px}.notice{border:1px solid #ffc93c44;background:#ffc93c0e;color:#d8cfa9;border-radius:13px;padding:13px;margin-bottom:17px}.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:17px;padding:35px;text-align:center;color:var(--muted)}.team{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#0d121d;box-shadow:var(--shadow)}.banner{padding:28px;background:linear-gradient(115deg,color-mix(in srgb,var(--team) 28%,#111724),#111724 70%);border-bottom:1px solid var(--line)}.back{border:1px solid #ffffff2d;background:#0003;color:white;border-radius:10px;padding:9px 12px;margin-bottom:20px}.teamrow{display:flex;align-items:center;justify-content:space-between;gap:18px}.teamtitle{display:flex;align-items:center;gap:16px}.badge{width:72px;height:72px;border-radius:21px;background:var(--team);display:grid;place-items:center;font-weight:950;font-size:1.2rem}.teamtitle h2{font-size:clamp(1.7rem,4vw,2.8rem);margin:0}.teamtitle p{color:#ffffffb0;margin:5px 0 0}.tabs{display:flex;gap:4px;overflow:auto;padding:10px;background:#090e17;border-bottom:1px solid var(--line)}.tabbtn{flex:0 0 auto;border:0;border-radius:9px;background:transparent;color:var(--muted);padding:11px 14px;font-weight:850}.tabbtn.active{background:var(--team);color:white}.body{padding:22px}.panels{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.panel{border:1px solid var(--line);border-radius:15px;background:var(--panel);padding:18px}.panel h3{margin:0 0 11px}.panel p{color:var(--muted);line-height:1.6}.s8{grid-column:span 8}.s4{grid-column:span 4}.s12{grid-column:span 12}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.metric{border:1px solid var(--line);border-radius:11px;padding:14px;background:#ffffff06}.metric small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.metric strong{display:block;margin-top:7px;font-size:1.25rem}.links{display:flex;flex-wrap:wrap;gap:9px}.link{border:1px solid var(--line);border-radius:10px;padding:10px 13px;color:white;text-decoration:none;font-weight:800}.link.primary{background:var(--team);border-color:var(--team)}footer{width:min(1450px,calc(100% - 30px));margin:auto;padding:0 0 32px;text-align:center;color:var(--muted);font-size:.84rem}@media(max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}}@media(max-width:820px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.s8,.s4{grid-column:span 12}.metrics{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.head,main,footer{width:min(100% - 20px,1450px)}.actions{display:none}.hero>div{padding:21px}.grid{grid-template-columns:1fr}.banner,.body{padding:15px}.badge{width:58px;height:58px;border-radius:17px}}
+
+.loading{display:flex;align-items:center;gap:12px;color:var(--muted);padding:25px 0}
+.spinner{width:24px;height:24px;border:3px solid var(--line);border-top-color:var(--blue);border-radius:50%;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.errorBox{border:1px solid #fb718566;background:#fb718512;border-radius:13px;padding:15px;color:#ffc2cd}
+.liveNote{border:1px solid #45d48355;background:#45d48310;border-radius:13px;padding:12px 14px;color:#bdebd0;margin-bottom:14px}
+.tableWrap{overflow-x:auto}.dataTable{width:100%;border-collapse:collapse;min-width:680px}.dataTable th,.dataTable td{padding:12px;border-bottom:1px solid var(--line);text-align:left}.dataTable th{font-size:.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.eventList{display:grid;gap:10px}.event{display:grid;grid-template-columns:150px 1fr auto;gap:14px;align-items:center;border:1px solid var(--line);border-radius:13px;padding:14px;background:#ffffff05}.event small{display:block;color:var(--muted);margin-top:4px}
+.articleGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.article{border:1px solid var(--line);border-radius:14px;background:#ffffff05;padding:16px;display:flex;flex-direction:column;min-height:210px}.article h4{margin:0 0 8px}.article p{color:var(--muted);line-height:1.5}.article a{margin-top:auto;font-weight:850;text-decoration:none}
+.playerGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.player{border:1px solid var(--line);border-radius:13px;padding:15px;background:#ffffff05}.player h4{margin:0 0 5px}.player p{margin:4px 0;color:var(--muted)}
+.recordBig{font-size:2rem;font-weight:950;margin:5px 0 10px}.muted{color:var(--muted)}
+@media(max-width:900px){.articleGrid,.playerGrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.articleGrid,.playerGrid{grid-template-columns:1fr}.event{grid-template-columns:1fr}}
+
+.sourceLabel{display:inline-block;margin-top:8px;padding:5px 8px;border-radius:999px;background:#4f9dff14;border:1px solid #4f9dff33;color:#a8d2ff;font-size:.75rem;font-weight:800}
+
+/* ================================================================
+   LIGHT THEME
+
+   Dark mode is Arena's default. When JavaScript places
+   data-theme="light" on <body>, these variables replace the dark
+   palette throughout the existing interface.
+   ================================================================ */
+body[data-theme="light"]{
+ --bg:#eef2f8;
+ --panel:#ffffff;
+ --panel2:#f6f8fc;
+ --line:#cbd5e1;
+ --text:#172033;
+ --muted:#607087;
+ --shadow:0 22px 58px rgba(38,54,78,.16);
+ background:
+  radial-gradient(circle at 10% 0,rgba(79,157,255,.17),transparent 32%),
+  radial-gradient(circle at 90% 0,rgba(124,92,255,.12),transparent 29%),
+  var(--bg);
+}
+body[data-theme="light"] header{
+ background:rgba(245,248,252,.9);
+ border-bottom-color:rgba(43,57,78,.13);
+}
+body[data-theme="light"] .hero>div,
+body[data-theme="light"] .card,
+body[data-theme="light"] .team,
+body[data-theme="light"] .panel{
+ background:linear-gradient(145deg,#ffffff,#f4f7fb);
+}
+body[data-theme="light"] .search,
+body[data-theme="light"] .btn,
+body[data-theme="light"] .star{
+ background:#ffffff;
+ color:var(--text);
+}
+body[data-theme="light"] .tabs{
+ background:#e8edf5;
+}
+body[data-theme="light"] .tabbtn:not(.active){
+ color:#5b687c;
+}
+body[data-theme="light"] .card p,
+body[data-theme="light"] .panel p,
+body[data-theme="light"] .teamtitle p{
+ color:var(--muted);
+}
+body[data-theme="light"] code{
+ background:#e3e9f2;
+ color:#28364c;
+ padding:2px 5px;
+ border-radius:5px;
+}
+.themeIcon{
+ display:inline-block;
+ width:1.1em;
+ text-align:center;
+}
+
+/* ================================================================
+   POSTSEASON AND BRACKET LAYOUTS
+   ================================================================ */
+.roundTabs{display:flex;gap:7px;overflow-x:auto;margin:0 0 15px;padding-bottom:4px}
+.roundButton{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:9px 13px;font-weight:850}
+.roundButton.active{background:var(--team);border-color:var(--team);color:#fff}
+.bracketScroll{overflow-x:auto;padding-bottom:12px}
+.bracket{display:flex;gap:18px;min-width:max-content;align-items:stretch}
+.bracketRound{width:270px;display:flex;flex-direction:column;gap:12px}
+.bracketRound h4{position:sticky;top:0;margin:0;padding:10px;border-radius:10px;background:var(--panel2);z-index:2}
+.matchup{border:1px solid var(--line);border-radius:13px;background:#ffffff05;overflow:hidden}
+.matchTeam{display:grid;grid-template-columns:34px 1fr auto;gap:9px;align-items:center;padding:11px}
+.matchTeam+ .matchTeam{border-top:1px solid var(--line)}
+.seed{width:27px;height:27px;border-radius:8px;display:grid;place-items:center;background:var(--panel2);color:var(--muted);font-weight:900}
+.winner{background:#45d48312}.winner strong{color:#66e39a}
+.matchMeta{padding:9px 11px;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
+.playoffGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.playoffCard{border:1px solid var(--line);border-radius:14px;background:#ffffff05;padding:15px}
+.playoffCard h4{margin:0 0 8px}
+@media(max-width:700px){.playoffGrid{grid-template-columns:1fr}}
+
+/* ================================================================
+   PERSONALIZED HOME MODULES
+   ================================================================ */
+
+.timelineWrap{margin:0 0 27px}
+.timelineList{display:grid;gap:11px}
+.timelineDay{border:1px solid var(--line);border-radius:16px;background:var(--panel);overflow:hidden}
+.timelineDay h3{margin:0;padding:12px 15px;background:var(--panel2);font-size:.92rem}
+.timelineEvent{display:grid;grid-template-columns:82px 1fr auto;gap:13px;align-items:center;padding:14px 15px;border-top:1px solid var(--line)}
+.timelineEvent:first-of-type{border-top:0}
+.timelineTime{font-weight:900;color:var(--blue)}
+.timelineEvent small{display:block;color:var(--muted);margin-top:4px}
+.timelineStatus{font-size:.78rem;color:var(--muted);text-align:right}
+.timelineEmpty{border:1px dashed var(--line);border-radius:15px;padding:25px;text-align:center;color:var(--muted)}
+
+.favoritePlayerSection{margin-bottom:27px}
+.favoritePlayerGrid{display:flex;gap:10px;overflow-x:auto;padding-bottom:5px}
+.favoritePlayerChip{flex:0 0 auto;border:1px solid var(--line);border-radius:13px;background:var(--panel);color:var(--text);padding:11px 13px;text-align:left}
+.favoritePlayerChip strong,.favoritePlayerChip span{display:block}
+.favoritePlayerChip span{color:var(--muted);font-size:.78rem;margin-top:3px}
+
+.playerFavorite{float:right;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;background:var(--panel2);color:var(--muted)}
+.playerFavorite.on{color:var(--gold);border-color:var(--gold)}
+
+.calendarToolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:13px}
+.calendarNav{display:flex;gap:7px}
+.calendarGrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}
+.calendarWeekday{text-align:center;color:var(--muted);font-size:.72rem;font-weight:900;padding:7px 0}
+.calendarCell{min-height:104px;border:1px solid var(--line);border-radius:10px;background:var(--panel);padding:8px}
+.calendarCell.outside{opacity:.35}
+.calendarCell.today{outline:2px solid var(--purple);outline-offset:-2px}
+.calendarDate{font-weight:900;font-size:.82rem}
+.calendarGame{margin-top:7px;border-left:3px solid var(--team);padding-left:6px;font-size:.7rem;line-height:1.35}
+.calendarGame button{border:0;background:transparent;color:inherit;padding:0;text-align:left;font:inherit}
+.calendarGame small{color:var(--muted)}
+
+.detailGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.detailCard{border:1px solid var(--line);border-radius:13px;background:#ffffff05;padding:14px}
+.detailCard h4{margin:0 0 8px}.detailCard p{margin:5px 0;color:var(--muted)}
+.saveGameButton{border:1px solid var(--line);border-radius:9px;background:var(--panel2);color:var(--text);padding:8px 10px;font-weight:800}
+.saveGameButton.on{color:var(--gold);border-color:var(--gold)}
+.comparePanel{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:15px;text-align:center}
+.compareTeam{border:1px solid var(--line);border-radius:14px;padding:18px;background:#ffffff05}
+.compareVs{font-weight:950;color:var(--muted)}
+.savedGameList{display:grid;gap:9px}
+.savedGame{display:flex;justify-content:space-between;gap:15px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:12px}
+@media(max-width:700px){
+ .timelineEvent{grid-template-columns:65px 1fr}
+ .timelineStatus{grid-column:2;text-align:left}
+ .calendarCell{min-height:75px;padding:5px}.calendarGame small{display:none}
+ .detailGrid{grid-template-columns:1fr}.comparePanel{grid-template-columns:1fr}.compareVs{padding:2px}
+}
+
+/* ================================================================
+   IN-SEASON PREVIEW
+
+   Arena uses broad, typical season windows to give users a useful
+   homepage shortcut. Exact league calendars can shift by year, so
+   official live schedules remain the source of truth.
+   ================================================================ */
+
+.inSeasonWrap{margin:0 0 28px}
+.inSeasonGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.seasonCard{position:relative;border:1px solid var(--line);border-radius:15px;background:linear-gradient(145deg,var(--panel),var(--panel2));padding:15px;min-height:132px;overflow:hidden;transition:.2s ease}
+.seasonCard:hover{transform:translateY(-3px);border-color:var(--blue)}
+.seasonCard::after{content:"";position:absolute;width:90px;height:90px;border:20px solid rgba(79,157,255,.08);border-radius:50%;right:-43px;top:-42px}
+.seasonCard h3{position:relative;z-index:2;margin:0 0 7px;font-size:1rem}
+.seasonCard p{position:relative;z-index:2;margin:0;color:var(--muted);font-size:.82rem;line-height:1.45}
+.seasonBadge{position:relative;z-index:2;display:inline-flex;align-items:center;gap:6px;margin-bottom:11px;padding:5px 8px;border-radius:999px;color:#9cf1bd;background:rgba(69,212,131,.1);border:1px solid rgba(69,212,131,.28);font-size:.72rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
+.seasonDot{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(69,212,131,.55)}
+.seasonNote{margin-top:11px;color:var(--muted);font-size:.78rem}
+@media(max-width:1100px){.inSeasonGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:820px){.inSeasonGrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.inSeasonGrid{grid-template-columns:1fr 1fr}.seasonCard{min-height:120px;padding:13px}}
+@media(max-width:410px){.inSeasonGrid{grid-template-columns:1fr}}
+
+/* ================================================================
+   SPORT SEASON STATUS BADGES
+
+   The separate "In Season Now" section was removed. Each top-level
+   Explore Arena card now carries its own date-aware status badge.
+   ================================================================ */
+
+.sportStatus{
+ position:relative;
+ z-index:2;
+ display:inline-flex;
+ align-items:center;
+ gap:6px;
+ margin-top:10px;
+ padding:5px 8px;
+ border-radius:999px;
+ border:1px solid var(--line);
+ font-size:.7rem;
+ font-weight:900;
+ text-transform:uppercase;
+ letter-spacing:.055em;
+}
+
+.sportStatus::before{
+ content:"";
+ width:7px;
+ height:7px;
+ border-radius:50%;
+ background:currentColor;
+ box-shadow:0 0 9px currentColor;
+}
+
+.status-preseason{
+ color:#7ec2ff;
+ background:rgba(79,157,255,.1);
+ border-color:rgba(79,157,255,.3);
+}
+
+.status-inseason{
+ color:#75e5a2;
+ background:rgba(69,212,131,.1);
+ border-color:rgba(69,212,131,.3);
+}
+
+.status-postseason{
+ color:#ffc93c;
+ background:rgba(255,201,60,.1);
+ border-color:rgba(255,201,60,.32);
+}
+
+.status-offseason{
+ color:#aab4c5;
+ background:rgba(156,169,189,.08);
+ border-color:rgba(156,169,189,.23);
+}
+
+.statusNext{
+ position:relative;
+ z-index:2;
+ margin-top:6px;
+ color:var(--muted);
+ font-size:.74rem;
+ line-height:1.35;
+}
+</style></head><body>
+<header><div class="head"><div class="brand">
+<svg class="logo" viewBox="0 0 100 100" aria-label="Arena logo"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4f9dff"/><stop offset="1" stop-color="#7c5cff"/></linearGradient><radialGradient id="f"><stop stop-color="#7ec2ff"/><stop offset="1" stop-color="#6248e8"/></radialGradient></defs><ellipse cx="50" cy="50" rx="43" ry="34" fill="#0c1220" stroke="url(#g)" stroke-width="7"/><ellipse cx="50" cy="50" rx="25" ry="18" fill="url(#f)"/><path d="M50 9v19M50 72v19M8 50h22M70 50h22" stroke="#d7e7ff" stroke-width="7" stroke-linecap="round"/><path d="M50 39l3.2 6.5 7.2 1-5.2 5.1 1.2 7.2-6.4-3.4-6.4 3.4 1.2-7.2-5.2-5.1 7.2-1z" fill="#ffc93c"/></svg>
+<div><h1>ARENA</h1><div class="tag">Find your league. Follow your team.</div></div></div><div class="actions"><button class="btn" id="themeToggle"><span class="themeIcon" id="themeIcon">☾</span> <span id="themeLabel">Dark</span></button><button class="btn" id="favOnly">★ Favorites</button><button class="btn" id="home">Browse sports</button></div></div></header>
+<main><section id="browser"><div class="hero"><div><div class="eyebrow">Your sports directory</div><h2>Every road leads to the <span>Arena.</span></h2><p>Start with a sport, move through leagues, conferences, and divisions, then favorite the teams you want waiting for you next time.</p></div><div>
+<h3>Your Arena</h3>
+<div class="stat"><span>Saved favorites</span><strong id="favCount">0</strong></div>
+<div class="stat"><span>Recently viewed</span><strong id="recentCount">0</strong></div>
+<div class="stat"><span>Last live update</span><strong id="lastUpdatedLabel">Not loaded yet</strong></div>
+<div class="stat"><span>Live data source</span><strong>ESPN site feeds</strong></div>
+</div></div>
+
+<div class="notice" id="sourceNotice">
+<strong>Where Arena gets its data:</strong>
+Team records, schedules, rosters, statistics, standings, racing results, rugby competition data, and news are requested from
+ESPN's public website data feeds when a team, driver, or constructor page is opened. These feeds are used by
+ESPN's own web pages, but they are not a guaranteed public developer API, so Arena
+includes error handling and fallback links in case a feed changes or is unavailable.
+</div>
+<section class="favWrap hidden" id="favWrap"><div class="heading"><div><h2>Favorites</h2><p>Your saved teams and followed subjects.</p></div></div><div class="favList" id="favList"></div></section>
+
+
+<section class="timelineWrap hidden" id="timelineWrap">
+ <div class="heading">
+  <div>
+   <h2>Favorite Timeline</h2>
+   <p>Upcoming games and events for favorites only.</p>
+  </div>
+  <button class="btn" id="refreshTimeline">Refresh</button>
+ </div>
+ <div class="timelineList" id="timelineList"></div>
+</section>
+
+<section class="favoritePlayerSection hidden" id="favoritePlayerWrap">
+ <div class="heading">
+  <div>
+   <h2>Favorite Players</h2>
+   <p>Players you starred from team roster pages.</p>
+  </div>
+ </div>
+ <div class="favoritePlayerGrid" id="favoritePlayerGrid"></div>
+</section>
+<section class="favWrap hidden" id="recentWrap">
+<div class="heading">
+<div>
+<h2>Recently viewed</h2>
+<p>Teams you opened most recently.</p>
+</div>
+</div>
+<div class="favList" id="recentList"></div>
+</section>
+<input class="search" id="search" placeholder="Search any league, conference, division, club, or team..."><nav class="crumbs" id="crumbs"></nav><div class="notice hidden" id="notice">College directories in this first version prioritize FBS and major Division I conferences. The navigation is ready for more teams later.</div><div class="heading"><div><h2 id="title">Explore Arena</h2><p id="subtitle">Choose a starting point.</p></div><strong id="count"></strong></div><section class="grid" id="grid"></section></section>
+<section class="team hidden" id="team"><div class="banner"><button class="back" id="back">← Back</button><div class="teamrow"><div class="teamtitle"><div class="badge" id="badge"></div><div><h2 id="teamName"></h2><p id="teamPath"></p></div></div><button class="star" id="teamStar">★</button></div></div><nav class="tabs" id="tabs"></nav><div class="body" id="body"></div></section></main>
+<footer>Arena is a single-file live sports directory. Current team data is requested from ESPN website data feeds when an internet connection and browser permissions are available.</footer>
+<script>
+/* ================================================================
+   ARENA JAVASCRIPT GUIDE
+   ================================================================
+
+   Arena is a single-file application. That means the HTML structure,
+   CSS styles, sports directory data, favorites, navigation, and live
+   data requests all live inside this one file.
+
+   Major sections below:
+
+   1. DIRECTORY DATA
+      Stores the leagues, conferences, divisions, and teams.
+
+   2. LOCAL STORAGE
+      Saves favorite teams and recently viewed teams in the browser.
+
+   3. DIRECTORY NAVIGATION
+      Handles search, breadcrumbs, cards, and drill-down navigation.
+
+   4. LIVE SPORTS DATA
+      Requests current information from ESPN's website data feeds.
+
+   5. TEAM DASHBOARD
+
+   6. PERSONALIZATION
+      Favorite-only timeline, favorite players, saved games, theme,
+      recently viewed teams, and local browser preferences.
+
+   7. SPORT SEASON STATUS
+      Every top-level Explore Arena card displays Preseason, In season,
+      Postseason, or Off season. Off-season cards also show the next
+      expected start month and year.
+
+   8. EUROPEAN SOCCER LEAGUES
+      Bundesliga, La Liga, Serie A, and Ligue 1 use the same reusable
+      soccer dashboard engine as the Premier League.
+
+   9. RUGBY DIRECTORY
+      Rugby is divided into Rugby Union and Rugby League. Because one
+      top-level Rugby category contains several independent leagues,
+      leagueConfig() checks the full breadcrumb path before selecting
+      a live-data feed.
+
+   10. SCROLL-POSITION NAVIGATION
+      Directory selections preserve the current viewport. Team pages
+      align only their own banner when needed, and Back restores the
+      exact directory position saved before the team was opened.
+      Renders Overview, Schedule, Roster, Players, Statistics,
+      Standings, and News tabs.
+
+   Important:
+   The ESPN endpoints used here are public website feeds rather than
+   a guaranteed public developer API. Arena therefore uses try/catch,
+   fallbacks, and friendly error messages instead of assuming every
+   request will always succeed.
+   ================================================================ */
+
+const ROOT=[{"type":"group","id":"mlb","name":"MLB","subtitle":"Major League Baseball","children":[{"type":"group","id":"american-league","name":"American League","subtitle":"","children":[{"type":"group","id":"al-east","name":"AL East","subtitle":"","children":[{"type":"team","id":"baltimore-orioles","name":"Baltimore Orioles"},{"type":"team","id":"boston-red-sox","name":"Boston Red Sox"},{"type":"team","id":"new-york-yankees","name":"New York Yankees"},{"type":"team","id":"tampa-bay-rays","name":"Tampa Bay Rays"},{"type":"team","id":"toronto-blue-jays","name":"Toronto Blue Jays"}]},{"type":"group","id":"al-central","name":"AL Central","subtitle":"","children":[{"type":"team","id":"chicago-white-sox","name":"Chicago White Sox"},{"type":"team","id":"cleveland-guardians","name":"Cleveland Guardians"},{"type":"team","id":"detroit-tigers","name":"Detroit Tigers"},{"type":"team","id":"kansas-city-royals","name":"Kansas City Royals"},{"type":"team","id":"minnesota-twins","name":"Minnesota Twins"}]},{"type":"group","id":"al-west","name":"AL West","subtitle":"","children":[{"type":"team","id":"athletics","name":"Athletics"},{"type":"team","id":"houston-astros","name":"Houston Astros"},{"type":"team","id":"los-angeles-angels","name":"Los Angeles Angels"},{"type":"team","id":"seattle-mariners","name":"Seattle Mariners"},{"type":"team","id":"texas-rangers","name":"Texas Rangers"}]}]},{"type":"group","id":"national-league","name":"National League","subtitle":"","children":[{"type":"group","id":"nl-east","name":"NL East","subtitle":"","children":[{"type":"team","id":"atlanta-braves","name":"Atlanta Braves"},{"type":"team","id":"miami-marlins","name":"Miami Marlins"},{"type":"team","id":"new-york-mets","name":"New York Mets"},{"type":"team","id":"philadelphia-phillies","name":"Philadelphia Phillies"},{"type":"team","id":"washington-nationals","name":"Washington Nationals"}]},{"type":"group","id":"nl-central","name":"NL Central","subtitle":"","children":[{"type":"team","id":"chicago-cubs","name":"Chicago Cubs"},{"type":"team","id":"cincinnati-reds","name":"Cincinnati Reds"},{"type":"team","id":"milwaukee-brewers","name":"Milwaukee Brewers"},{"type":"team","id":"pittsburgh-pirates","name":"Pittsburgh Pirates"},{"type":"team","id":"st-louis-cardinals","name":"St. Louis Cardinals"}]},{"type":"group","id":"nl-west","name":"NL West","subtitle":"","children":[{"type":"team","id":"arizona-diamondbacks","name":"Arizona Diamondbacks"},{"type":"team","id":"colorado-rockies","name":"Colorado Rockies"},{"type":"team","id":"los-angeles-dodgers","name":"Los Angeles Dodgers"},{"type":"team","id":"san-diego-padres","name":"San Diego Padres"},{"type":"team","id":"san-francisco-giants","name":"San Francisco Giants"}]}]}]},{"type":"group","id":"premier-league","name":"Premier League","subtitle":"English top-flight club directory","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"arsenal","name":"Arsenal"},{"type":"team","id":"aston-villa","name":"Aston Villa"},{"type":"team","id":"bournemouth","name":"Bournemouth"},{"type":"team","id":"brentford","name":"Brentford"},{"type":"team","id":"brighton-hove-albion","name":"Brighton & Hove Albion"},{"type":"team","id":"burnley","name":"Burnley"},{"type":"team","id":"chelsea","name":"Chelsea"},{"type":"team","id":"crystal-palace","name":"Crystal Palace"},{"type":"team","id":"everton","name":"Everton"},{"type":"team","id":"fulham","name":"Fulham"},{"type":"team","id":"leeds-united","name":"Leeds United"},{"type":"team","id":"liverpool","name":"Liverpool"},{"type":"team","id":"manchester-city","name":"Manchester City"},{"type":"team","id":"manchester-united","name":"Manchester United"},{"type":"team","id":"newcastle-united","name":"Newcastle United"},{"type":"team","id":"nottingham-forest","name":"Nottingham Forest"},{"type":"team","id":"sunderland","name":"Sunderland"},{"type":"team","id":"tottenham-hotspur","name":"Tottenham Hotspur"},{"type":"team","id":"west-ham-united","name":"West Ham United"},{"type":"team","id":"wolverhampton-wanderers","name":"Wolverhampton Wanderers"}]}]},{"type":"group","id":"bundesliga","name":"Bundesliga","subtitle":"Germany's top domestic soccer league","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"bayern-munich","name":"Bayern Munich"},{"type":"team","id":"borussia-dortmund","name":"Borussia Dortmund"},{"type":"team","id":"rb-leipzig","name":"RB Leipzig"},{"type":"team","id":"vfb-stuttgart","name":"VfB Stuttgart"},{"type":"team","id":"hoffenheim","name":"Hoffenheim"},{"type":"team","id":"bayer-leverkusen","name":"Bayer Leverkusen"},{"type":"team","id":"freiburg","name":"Freiburg"},{"type":"team","id":"eintracht-frankfurt","name":"Eintracht Frankfurt"},{"type":"team","id":"augsburg","name":"Augsburg"},{"type":"team","id":"mainz","name":"Mainz"},{"type":"team","id":"union-berlin","name":"Union Berlin"},{"type":"team","id":"borussia-m-nchengladbach","name":"Borussia Mönchengladbach"},{"type":"team","id":"hamburg","name":"Hamburg"},{"type":"team","id":"cologne","name":"Cologne"},{"type":"team","id":"werder-bremen","name":"Werder Bremen"},{"type":"team","id":"schalke","name":"Schalke"},{"type":"team","id":"elversberg","name":"Elversberg"},{"type":"team","id":"paderborn","name":"Paderborn"}]}]},{"type":"group","id":"la-liga","name":"La Liga","subtitle":"Spain's top domestic soccer league","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"athletic-club","name":"Athletic Club"},{"type":"team","id":"atl-tico-de-madrid","name":"Atlético de Madrid"},{"type":"team","id":"osasuna","name":"Osasuna"},{"type":"team","id":"celta-vigo","name":"Celta Vigo"},{"type":"team","id":"deportivo-alav-s","name":"Deportivo Alavés"},{"type":"team","id":"elche-cf","name":"Elche CF"},{"type":"team","id":"barcelona","name":"Barcelona"},{"type":"team","id":"getafe-cf","name":"Getafe CF"},{"type":"team","id":"levante-ud","name":"Levante UD"},{"type":"team","id":"m-laga-cf","name":"Málaga CF"},{"type":"team","id":"racing-santander","name":"Racing Santander"},{"type":"team","id":"rayo-vallecano","name":"Rayo Vallecano"},{"type":"team","id":"deportivo-la-coru-a","name":"Deportivo La Coruña"},{"type":"team","id":"espanyol","name":"Espanyol"},{"type":"team","id":"real-betis","name":"Real Betis"},{"type":"team","id":"real-madrid","name":"Real Madrid"},{"type":"team","id":"real-sociedad","name":"Real Sociedad"},{"type":"team","id":"sevilla-fc","name":"Sevilla FC"},{"type":"team","id":"valencia-cf","name":"Valencia CF"},{"type":"team","id":"villarreal-cf","name":"Villarreal CF"}]}]},{"type":"group","id":"serie-a","name":"Serie A","subtitle":"Italy's top domestic soccer league","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"ac-milan","name":"AC Milan"},{"type":"team","id":"atalanta","name":"Atalanta"},{"type":"team","id":"bologna","name":"Bologna"},{"type":"team","id":"cagliari","name":"Cagliari"},{"type":"team","id":"como","name":"Como"},{"type":"team","id":"fiorentina","name":"Fiorentina"},{"type":"team","id":"frosinone","name":"Frosinone"},{"type":"team","id":"genoa","name":"Genoa"},{"type":"team","id":"inter-milan","name":"Inter Milan"},{"type":"team","id":"juventus","name":"Juventus"},{"type":"team","id":"lazio","name":"Lazio"},{"type":"team","id":"lecce","name":"Lecce"},{"type":"team","id":"monza","name":"Monza"},{"type":"team","id":"napoli","name":"Napoli"},{"type":"team","id":"parma","name":"Parma"},{"type":"team","id":"roma","name":"Roma"},{"type":"team","id":"sassuolo","name":"Sassuolo"},{"type":"team","id":"torino","name":"Torino"},{"type":"team","id":"udinese","name":"Udinese"},{"type":"team","id":"venezia","name":"Venezia"}]}]},{"type":"group","id":"ligue-1","name":"Ligue 1","subtitle":"France's top domestic soccer league","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"aj-auxerre","name":"AJ Auxerre"},{"type":"team","id":"angers-sco","name":"Angers SCO"},{"type":"team","id":"as-monaco","name":"AS Monaco"},{"type":"team","id":"brest","name":"Brest"},{"type":"team","id":"fc-lorient","name":"FC Lorient"},{"type":"team","id":"le-havre","name":"Le Havre"},{"type":"team","id":"le-mans-fc","name":"Le Mans FC"},{"type":"team","id":"lille","name":"Lille"},{"type":"team","id":"ogc-nice","name":"OGC Nice"},{"type":"team","id":"olympique-lyonnais","name":"Olympique Lyonnais"},{"type":"team","id":"olympique-de-marseille","name":"Olympique de Marseille"},{"type":"team","id":"paris-fc","name":"Paris FC"},{"type":"team","id":"paris-saint-germain","name":"Paris Saint-Germain"},{"type":"team","id":"rc-lens","name":"RC Lens"},{"type":"team","id":"rennes","name":"Rennes"},{"type":"team","id":"strasbourg","name":"Strasbourg"},{"type":"team","id":"toulouse","name":"Toulouse"},{"type":"team","id":"troyes","name":"Troyes"}]}]},{"type":"group","id":"champions-league","name":"Champions League","subtitle":"UEFA club competition","children":[{"type":"group","id":"club-directory-by-domestic-league","name":"Club Directory by Domestic League","subtitle":"The active tournament field changes by season","children":[{"type":"group","id":"england","name":"England","subtitle":"","children":[{"type":"team","id":"arsenal","name":"Arsenal"},{"type":"team","id":"chelsea","name":"Chelsea"},{"type":"team","id":"liverpool","name":"Liverpool"},{"type":"team","id":"manchester-city","name":"Manchester City"},{"type":"team","id":"newcastle-united","name":"Newcastle United"},{"type":"team","id":"tottenham-hotspur","name":"Tottenham Hotspur"}]},{"type":"group","id":"spain","name":"Spain","subtitle":"","children":[{"type":"team","id":"atl-tico-madrid","name":"Atlético Madrid"},{"type":"team","id":"barcelona","name":"Barcelona"},{"type":"team","id":"real-madrid","name":"Real Madrid"},{"type":"team","id":"villarreal","name":"Villarreal"}]},{"type":"group","id":"germany","name":"Germany","subtitle":"","children":[{"type":"team","id":"bayern-munich","name":"Bayern Munich"},{"type":"team","id":"borussia-dortmund","name":"Borussia Dortmund"},{"type":"team","id":"bayer-leverkusen","name":"Bayer Leverkusen"},{"type":"team","id":"rb-leipzig","name":"RB Leipzig"}]},{"type":"group","id":"italy","name":"Italy","subtitle":"","children":[{"type":"team","id":"inter-milan","name":"Inter Milan"},{"type":"team","id":"ac-milan","name":"AC Milan"},{"type":"team","id":"juventus","name":"Juventus"},{"type":"team","id":"napoli","name":"Napoli"},{"type":"team","id":"atalanta","name":"Atalanta"}]},{"type":"group","id":"france","name":"France","subtitle":"","children":[{"type":"team","id":"paris-saint-germain","name":"Paris Saint-Germain"},{"type":"team","id":"marseille","name":"Marseille"},{"type":"team","id":"monaco","name":"Monaco"},{"type":"team","id":"lyon","name":"Lyon"}]},{"type":"group","id":"other-europe","name":"Other Europe","subtitle":"","children":[{"type":"team","id":"ajax","name":"Ajax"},{"type":"team","id":"benfica","name":"Benfica"},{"type":"team","id":"porto","name":"Porto"},{"type":"team","id":"sporting-cp","name":"Sporting CP"},{"type":"team","id":"celtic","name":"Celtic"},{"type":"team","id":"galatasaray","name":"Galatasaray"},{"type":"team","id":"psv-eindhoven","name":"PSV Eindhoven"},{"type":"team","id":"feyenoord","name":"Feyenoord"},{"type":"team","id":"club-brugge","name":"Club Brugge"}]}]}]},{"type":"group","id":"olympics","name":"Olympics","subtitle":"Browse by Olympic season and sport","children":[{"type":"group","id":"summer-olympics","name":"Summer Olympics","subtitle":"","children":[{"type":"group","id":"team-sports","name":"Team Sports","subtitle":"","children":[{"type":"team","id":"united-states-basketball","name":"United States Basketball"},{"type":"team","id":"united-states-soccer","name":"United States Soccer"},{"type":"team","id":"united-states-volleyball","name":"United States Volleyball"},{"type":"team","id":"united-states-swimming","name":"United States Swimming"},{"type":"team","id":"united-states-track-field","name":"United States Track & Field"}]},{"type":"group","id":"sports","name":"Sports","subtitle":"","children":[{"type":"team","id":"athletics","name":"Athletics"},{"type":"team","id":"swimming","name":"Swimming"},{"type":"team","id":"gymnastics","name":"Gymnastics"},{"type":"team","id":"basketball","name":"Basketball"},{"type":"team","id":"soccer","name":"Soccer"},{"type":"team","id":"tennis","name":"Tennis"},{"type":"team","id":"volleyball","name":"Volleyball"},{"type":"team","id":"cycling","name":"Cycling"},{"type":"team","id":"wrestling","name":"Wrestling"},{"type":"team","id":"boxing","name":"Boxing"},{"type":"team","id":"rowing","name":"Rowing"},{"type":"team","id":"golf","name":"Golf"},{"type":"team","id":"rugby-sevens","name":"Rugby Sevens"}]}]},{"type":"group","id":"winter-olympics","name":"Winter Olympics","subtitle":"","children":[{"type":"group","id":"team-sports","name":"Team Sports","subtitle":"","children":[{"type":"team","id":"united-states-ice-hockey","name":"United States Ice Hockey"},{"type":"team","id":"canada-ice-hockey","name":"Canada Ice Hockey"},{"type":"team","id":"united-states-curling","name":"United States Curling"}]},{"type":"group","id":"sports","name":"Sports","subtitle":"","children":[{"type":"team","id":"alpine-skiing","name":"Alpine Skiing"},{"type":"team","id":"biathlon","name":"Biathlon"},{"type":"team","id":"bobsleigh","name":"Bobsleigh"},{"type":"team","id":"cross-country-skiing","name":"Cross-Country Skiing"},{"type":"team","id":"curling","name":"Curling"},{"type":"team","id":"figure-skating","name":"Figure Skating"},{"type":"team","id":"freestyle-skiing","name":"Freestyle Skiing"},{"type":"team","id":"ice-hockey","name":"Ice Hockey"},{"type":"team","id":"luge","name":"Luge"},{"type":"team","id":"short-track","name":"Short Track"},{"type":"team","id":"ski-jumping","name":"Ski Jumping"},{"type":"team","id":"snowboarding","name":"Snowboarding"},{"type":"team","id":"speed-skating","name":"Speed Skating"}]}]}]},{"type":"group","id":"nba","name":"NBA","subtitle":"National Basketball Association","children":[{"type":"group","id":"eastern-conference","name":"Eastern Conference","subtitle":"","children":[{"type":"group","id":"atlantic","name":"Atlantic","subtitle":"","children":[{"type":"team","id":"boston-celtics","name":"Boston Celtics"},{"type":"team","id":"brooklyn-nets","name":"Brooklyn Nets"},{"type":"team","id":"new-york-knicks","name":"New York Knicks"},{"type":"team","id":"philadelphia-76ers","name":"Philadelphia 76ers"},{"type":"team","id":"toronto-raptors","name":"Toronto Raptors"}]},{"type":"group","id":"central","name":"Central","subtitle":"","children":[{"type":"team","id":"chicago-bulls","name":"Chicago Bulls"},{"type":"team","id":"cleveland-cavaliers","name":"Cleveland Cavaliers"},{"type":"team","id":"detroit-pistons","name":"Detroit Pistons"},{"type":"team","id":"indiana-pacers","name":"Indiana Pacers"},{"type":"team","id":"milwaukee-bucks","name":"Milwaukee Bucks"}]},{"type":"group","id":"southeast","name":"Southeast","subtitle":"","children":[{"type":"team","id":"atlanta-hawks","name":"Atlanta Hawks"},{"type":"team","id":"charlotte-hornets","name":"Charlotte Hornets"},{"type":"team","id":"miami-heat","name":"Miami Heat"},{"type":"team","id":"orlando-magic","name":"Orlando Magic"},{"type":"team","id":"washington-wizards","name":"Washington Wizards"}]}]},{"type":"group","id":"western-conference","name":"Western Conference","subtitle":"","children":[{"type":"group","id":"northwest","name":"Northwest","subtitle":"","children":[{"type":"team","id":"denver-nuggets","name":"Denver Nuggets"},{"type":"team","id":"minnesota-timberwolves","name":"Minnesota Timberwolves"},{"type":"team","id":"oklahoma-city-thunder","name":"Oklahoma City Thunder"},{"type":"team","id":"portland-trail-blazers","name":"Portland Trail Blazers"},{"type":"team","id":"utah-jazz","name":"Utah Jazz"}]},{"type":"group","id":"pacific","name":"Pacific","subtitle":"","children":[{"type":"team","id":"golden-state-warriors","name":"Golden State Warriors"},{"type":"team","id":"la-clippers","name":"LA Clippers"},{"type":"team","id":"los-angeles-lakers","name":"Los Angeles Lakers"},{"type":"team","id":"phoenix-suns","name":"Phoenix Suns"},{"type":"team","id":"sacramento-kings","name":"Sacramento Kings"}]},{"type":"group","id":"southwest","name":"Southwest","subtitle":"","children":[{"type":"team","id":"dallas-mavericks","name":"Dallas Mavericks"},{"type":"team","id":"houston-rockets","name":"Houston Rockets"},{"type":"team","id":"memphis-grizzlies","name":"Memphis Grizzlies"},{"type":"team","id":"new-orleans-pelicans","name":"New Orleans Pelicans"},{"type":"team","id":"san-antonio-spurs","name":"San Antonio Spurs"}]}]}]},{"type":"group","id":"nfl","name":"NFL","subtitle":"National Football League","children":[{"type":"group","id":"afc","name":"AFC","subtitle":"","children":[{"type":"group","id":"afc-east","name":"AFC East","subtitle":"","children":[{"type":"team","id":"buffalo-bills","name":"Buffalo Bills"},{"type":"team","id":"miami-dolphins","name":"Miami Dolphins"},{"type":"team","id":"new-england-patriots","name":"New England Patriots"},{"type":"team","id":"new-york-jets","name":"New York Jets"}]},{"type":"group","id":"afc-north","name":"AFC North","subtitle":"","children":[{"type":"team","id":"baltimore-ravens","name":"Baltimore Ravens"},{"type":"team","id":"cincinnati-bengals","name":"Cincinnati Bengals"},{"type":"team","id":"cleveland-browns","name":"Cleveland Browns"},{"type":"team","id":"pittsburgh-steelers","name":"Pittsburgh Steelers"}]},{"type":"group","id":"afc-south","name":"AFC South","subtitle":"","children":[{"type":"team","id":"houston-texans","name":"Houston Texans"},{"type":"team","id":"indianapolis-colts","name":"Indianapolis Colts"},{"type":"team","id":"jacksonville-jaguars","name":"Jacksonville Jaguars"},{"type":"team","id":"tennessee-titans","name":"Tennessee Titans"}]},{"type":"group","id":"afc-west","name":"AFC West","subtitle":"","children":[{"type":"team","id":"denver-broncos","name":"Denver Broncos"},{"type":"team","id":"kansas-city-chiefs","name":"Kansas City Chiefs"},{"type":"team","id":"las-vegas-raiders","name":"Las Vegas Raiders"},{"type":"team","id":"los-angeles-chargers","name":"Los Angeles Chargers"}]}]},{"type":"group","id":"nfc","name":"NFC","subtitle":"","children":[{"type":"group","id":"nfc-east","name":"NFC East","subtitle":"","children":[{"type":"team","id":"dallas-cowboys","name":"Dallas Cowboys"},{"type":"team","id":"new-york-giants","name":"New York Giants"},{"type":"team","id":"philadelphia-eagles","name":"Philadelphia Eagles"},{"type":"team","id":"washington-commanders","name":"Washington Commanders"}]},{"type":"group","id":"nfc-north","name":"NFC North","subtitle":"","children":[{"type":"team","id":"chicago-bears","name":"Chicago Bears"},{"type":"team","id":"detroit-lions","name":"Detroit Lions"},{"type":"team","id":"green-bay-packers","name":"Green Bay Packers"},{"type":"team","id":"minnesota-vikings","name":"Minnesota Vikings"}]},{"type":"group","id":"nfc-south","name":"NFC South","subtitle":"","children":[{"type":"team","id":"atlanta-falcons","name":"Atlanta Falcons"},{"type":"team","id":"carolina-panthers","name":"Carolina Panthers"},{"type":"team","id":"new-orleans-saints","name":"New Orleans Saints"},{"type":"team","id":"tampa-bay-buccaneers","name":"Tampa Bay Buccaneers"}]},{"type":"group","id":"nfc-west","name":"NFC West","subtitle":"","children":[{"type":"team","id":"arizona-cardinals","name":"Arizona Cardinals"},{"type":"team","id":"los-angeles-rams","name":"Los Angeles Rams"},{"type":"team","id":"san-francisco-49ers","name":"San Francisco 49ers"},{"type":"team","id":"seattle-seahawks","name":"Seattle Seahawks"}]}]}]},{"type":"group","id":"college-football","name":"College Football","subtitle":"FBS and featured programs","children":[{"type":"group","id":"ncaa-division-i","name":"NCAA Division I","subtitle":"","children":[{"type":"group","id":"fbs","name":"FBS","subtitle":"","children":[{"type":"group","id":"acc","name":"ACC","subtitle":"","children":[{"type":"team","id":"boston-college-football","name":"Boston College Football"},{"type":"team","id":"california-football","name":"California Football"},{"type":"team","id":"clemson-football","name":"Clemson Football"},{"type":"team","id":"duke-football","name":"Duke Football"},{"type":"team","id":"florida-state-football","name":"Florida State Football"},{"type":"team","id":"georgia-tech-football","name":"Georgia Tech Football"},{"type":"team","id":"louisville-football","name":"Louisville Football"},{"type":"team","id":"miami-football","name":"Miami Football"},{"type":"team","id":"nc-state-football","name":"NC State Football"},{"type":"team","id":"north-carolina-football","name":"North Carolina Football"},{"type":"team","id":"pittsburgh-football","name":"Pittsburgh Football"},{"type":"team","id":"smu-football","name":"SMU Football"},{"type":"team","id":"stanford-football","name":"Stanford Football"},{"type":"team","id":"syracuse-football","name":"Syracuse Football"},{"type":"team","id":"virginia-football","name":"Virginia Football"},{"type":"team","id":"virginia-tech-football","name":"Virginia Tech Football"},{"type":"team","id":"wake-forest-football","name":"Wake Forest Football"}]},{"type":"group","id":"big-ten","name":"Big Ten","subtitle":"","children":[{"type":"team","id":"illinois-football","name":"Illinois Football"},{"type":"team","id":"indiana-football","name":"Indiana Football"},{"type":"team","id":"iowa-football","name":"Iowa Football"},{"type":"team","id":"maryland-football","name":"Maryland Football"},{"type":"team","id":"michigan-football","name":"Michigan Football"},{"type":"team","id":"michigan-state-football","name":"Michigan State Football"},{"type":"team","id":"minnesota-football","name":"Minnesota Football"},{"type":"team","id":"nebraska-football","name":"Nebraska Football"},{"type":"team","id":"northwestern-football","name":"Northwestern Football"},{"type":"team","id":"ohio-state-football","name":"Ohio State Football"},{"type":"team","id":"oregon-football","name":"Oregon Football"},{"type":"team","id":"penn-state-football","name":"Penn State Football"},{"type":"team","id":"purdue-football","name":"Purdue Football"},{"type":"team","id":"rutgers-football","name":"Rutgers Football"},{"type":"team","id":"ucla-football","name":"UCLA Football"},{"type":"team","id":"usc-football","name":"USC Football"},{"type":"team","id":"washington-football","name":"Washington Football"},{"type":"team","id":"wisconsin-football","name":"Wisconsin Football"}]},{"type":"group","id":"big-12","name":"Big 12","subtitle":"","children":[{"type":"team","id":"arizona-football","name":"Arizona Football"},{"type":"team","id":"arizona-state-football","name":"Arizona State Football"},{"type":"team","id":"baylor-football","name":"Baylor Football"},{"type":"team","id":"byu-football","name":"BYU Football"},{"type":"team","id":"cincinnati-football","name":"Cincinnati Football"},{"type":"team","id":"colorado-football","name":"Colorado Football"},{"type":"team","id":"houston-football","name":"Houston Football"},{"type":"team","id":"iowa-state-football","name":"Iowa State Football"},{"type":"team","id":"kansas-football","name":"Kansas Football"},{"type":"team","id":"kansas-state-football","name":"Kansas State Football"},{"type":"team","id":"oklahoma-state-football","name":"Oklahoma State Football"},{"type":"team","id":"tcu-football","name":"TCU Football"},{"type":"team","id":"texas-tech-football","name":"Texas Tech Football"},{"type":"team","id":"ucf-football","name":"UCF Football"},{"type":"team","id":"utah-football","name":"Utah Football"},{"type":"team","id":"west-virginia-football","name":"West Virginia Football"}]},{"type":"group","id":"sec","name":"SEC","subtitle":"","children":[{"type":"team","id":"alabama-football","name":"Alabama Football"},{"type":"team","id":"arkansas-football","name":"Arkansas Football"},{"type":"team","id":"auburn-football","name":"Auburn Football"},{"type":"team","id":"florida-football","name":"Florida Football"},{"type":"team","id":"georgia-football","name":"Georgia Football"},{"type":"team","id":"kentucky-football","name":"Kentucky Football"},{"type":"team","id":"lsu-football","name":"LSU Football"},{"type":"team","id":"mississippi-state-football","name":"Mississippi State Football"},{"type":"team","id":"missouri-football","name":"Missouri Football"},{"type":"team","id":"oklahoma-football","name":"Oklahoma Football"},{"type":"team","id":"ole-miss-football","name":"Ole Miss Football"},{"type":"team","id":"south-carolina-football","name":"South Carolina Football"},{"type":"team","id":"tennessee-football","name":"Tennessee Football"},{"type":"team","id":"texas-football","name":"Texas Football"},{"type":"team","id":"texas-a-m-football","name":"Texas A&M Football"},{"type":"team","id":"vanderbilt-football","name":"Vanderbilt Football"}]},{"type":"group","id":"group-of-five-independents","name":"Group of Five & Independents","subtitle":"","children":[{"type":"team","id":"army-football","name":"Army Football"},{"type":"team","id":"boise-state-football","name":"Boise State Football"},{"type":"team","id":"coastal-carolina-football","name":"Coastal Carolina Football"},{"type":"team","id":"fresno-state-football","name":"Fresno State Football"},{"type":"team","id":"liberty-football","name":"Liberty Football"},{"type":"team","id":"memphis-football","name":"Memphis Football"},{"type":"team","id":"navy-football","name":"Navy Football"},{"type":"team","id":"notre-dame-football","name":"Notre Dame Football"},{"type":"team","id":"tulane-football","name":"Tulane Football"},{"type":"team","id":"uconn-football","name":"UConn Football"},{"type":"team","id":"unlv-football","name":"UNLV Football"},{"type":"team","id":"utsa-football","name":"UTSA Football"}]}]}]}]},{"type":"group","id":"college-baseball","name":"College Baseball","subtitle":"Major Division I conferences","children":[{"type":"group","id":"ncaa-division-i","name":"NCAA Division I","subtitle":"","children":[{"type":"group","id":"sec","name":"SEC","subtitle":"","children":[{"type":"team","id":"alabama-baseball","name":"Alabama Baseball"},{"type":"team","id":"arkansas-baseball","name":"Arkansas Baseball"},{"type":"team","id":"auburn-baseball","name":"Auburn Baseball"},{"type":"team","id":"florida-baseball","name":"Florida Baseball"},{"type":"team","id":"georgia-baseball","name":"Georgia Baseball"},{"type":"team","id":"kentucky-baseball","name":"Kentucky Baseball"},{"type":"team","id":"lsu-baseball","name":"LSU Baseball"},{"type":"team","id":"mississippi-state-baseball","name":"Mississippi State Baseball"},{"type":"team","id":"oklahoma-baseball","name":"Oklahoma Baseball"},{"type":"team","id":"ole-miss-baseball","name":"Ole Miss Baseball"},{"type":"team","id":"south-carolina-baseball","name":"South Carolina Baseball"},{"type":"team","id":"tennessee-baseball","name":"Tennessee Baseball"},{"type":"team","id":"texas-baseball","name":"Texas Baseball"},{"type":"team","id":"texas-a-m-baseball","name":"Texas A&M Baseball"},{"type":"team","id":"vanderbilt-baseball","name":"Vanderbilt Baseball"}]},{"type":"group","id":"acc","name":"ACC","subtitle":"","children":[{"type":"team","id":"clemson-baseball","name":"Clemson Baseball"},{"type":"team","id":"duke-baseball","name":"Duke Baseball"},{"type":"team","id":"florida-state-baseball","name":"Florida State Baseball"},{"type":"team","id":"georgia-tech-baseball","name":"Georgia Tech Baseball"},{"type":"team","id":"louisville-baseball","name":"Louisville Baseball"},{"type":"team","id":"miami-baseball","name":"Miami Baseball"},{"type":"team","id":"nc-state-baseball","name":"NC State Baseball"},{"type":"team","id":"north-carolina-baseball","name":"North Carolina Baseball"},{"type":"team","id":"notre-dame-baseball","name":"Notre Dame Baseball"},{"type":"team","id":"stanford-baseball","name":"Stanford Baseball"},{"type":"team","id":"virginia-baseball","name":"Virginia Baseball"},{"type":"team","id":"virginia-tech-baseball","name":"Virginia Tech Baseball"},{"type":"team","id":"wake-forest-baseball","name":"Wake Forest Baseball"}]},{"type":"group","id":"big-12","name":"Big 12","subtitle":"","children":[{"type":"team","id":"arizona-baseball","name":"Arizona Baseball"},{"type":"team","id":"arizona-state-baseball","name":"Arizona State Baseball"},{"type":"team","id":"baylor-baseball","name":"Baylor Baseball"},{"type":"team","id":"houston-baseball","name":"Houston Baseball"},{"type":"team","id":"kansas-baseball","name":"Kansas Baseball"},{"type":"team","id":"kansas-state-baseball","name":"Kansas State Baseball"},{"type":"team","id":"oklahoma-state-baseball","name":"Oklahoma State Baseball"},{"type":"team","id":"tcu-baseball","name":"TCU Baseball"},{"type":"team","id":"texas-tech-baseball","name":"Texas Tech Baseball"},{"type":"team","id":"ucf-baseball","name":"UCF Baseball"},{"type":"team","id":"west-virginia-baseball","name":"West Virginia Baseball"}]},{"type":"group","id":"big-ten","name":"Big Ten","subtitle":"","children":[{"type":"team","id":"indiana-baseball","name":"Indiana Baseball"},{"type":"team","id":"iowa-baseball","name":"Iowa Baseball"},{"type":"team","id":"maryland-baseball","name":"Maryland Baseball"},{"type":"team","id":"michigan-baseball","name":"Michigan Baseball"},{"type":"team","id":"nebraska-baseball","name":"Nebraska Baseball"},{"type":"team","id":"ohio-state-baseball","name":"Ohio State Baseball"},{"type":"team","id":"oregon-baseball","name":"Oregon Baseball"},{"type":"team","id":"penn-state-baseball","name":"Penn State Baseball"},{"type":"team","id":"ucla-baseball","name":"UCLA Baseball"},{"type":"team","id":"usc-baseball","name":"USC Baseball"},{"type":"team","id":"washington-baseball","name":"Washington Baseball"}]}]}]},{"type":"group","id":"mls","name":"MLS","subtitle":"Major League Soccer","children":[{"type":"group","id":"eastern-conference","name":"Eastern Conference","subtitle":"","children":[{"type":"team","id":"atlanta-united-fc","name":"Atlanta United FC"},{"type":"team","id":"charlotte-fc","name":"Charlotte FC"},{"type":"team","id":"chicago-fire-fc","name":"Chicago Fire FC"},{"type":"team","id":"fc-cincinnati","name":"FC Cincinnati"},{"type":"team","id":"columbus-crew","name":"Columbus Crew"},{"type":"team","id":"d-c-united","name":"D.C. United"},{"type":"team","id":"inter-miami-cf","name":"Inter Miami CF"},{"type":"team","id":"cf-montr-al","name":"CF Montréal"},{"type":"team","id":"nashville-sc","name":"Nashville SC"},{"type":"team","id":"new-england-revolution","name":"New England Revolution"},{"type":"team","id":"new-york-city-fc","name":"New York City FC"},{"type":"team","id":"new-york-red-bulls","name":"New York Red Bulls"},{"type":"team","id":"orlando-city-sc","name":"Orlando City SC"},{"type":"team","id":"philadelphia-union","name":"Philadelphia Union"},{"type":"team","id":"toronto-fc","name":"Toronto FC"}]},{"type":"group","id":"western-conference","name":"Western Conference","subtitle":"","children":[{"type":"team","id":"austin-fc","name":"Austin FC"},{"type":"team","id":"colorado-rapids","name":"Colorado Rapids"},{"type":"team","id":"fc-dallas","name":"FC Dallas"},{"type":"team","id":"houston-dynamo-fc","name":"Houston Dynamo FC"},{"type":"team","id":"la-galaxy","name":"LA Galaxy"},{"type":"team","id":"los-angeles-fc","name":"Los Angeles FC"},{"type":"team","id":"minnesota-united-fc","name":"Minnesota United FC"},{"type":"team","id":"portland-timbers","name":"Portland Timbers"},{"type":"team","id":"real-salt-lake","name":"Real Salt Lake"},{"type":"team","id":"san-diego-fc","name":"San Diego FC"},{"type":"team","id":"san-jose-earthquakes","name":"San Jose Earthquakes"},{"type":"team","id":"seattle-sounders-fc","name":"Seattle Sounders FC"},{"type":"team","id":"sporting-kansas-city","name":"Sporting Kansas City"},{"type":"team","id":"st-louis-city-sc","name":"St. Louis City SC"},{"type":"team","id":"vancouver-whitecaps-fc","name":"Vancouver Whitecaps FC"}]}]},{"type":"group","id":"nhl","name":"NHL","subtitle":"National Hockey League","children":[{"type":"group","id":"eastern-conference","name":"Eastern Conference","subtitle":"","children":[{"type":"group","id":"atlantic","name":"Atlantic","subtitle":"","children":[{"type":"team","id":"boston-bruins","name":"Boston Bruins"},{"type":"team","id":"buffalo-sabres","name":"Buffalo Sabres"},{"type":"team","id":"detroit-red-wings","name":"Detroit Red Wings"},{"type":"team","id":"florida-panthers","name":"Florida Panthers"},{"type":"team","id":"montreal-canadiens","name":"Montreal Canadiens"},{"type":"team","id":"ottawa-senators","name":"Ottawa Senators"},{"type":"team","id":"tampa-bay-lightning","name":"Tampa Bay Lightning"},{"type":"team","id":"toronto-maple-leafs","name":"Toronto Maple Leafs"}]},{"type":"group","id":"metropolitan","name":"Metropolitan","subtitle":"","children":[{"type":"team","id":"carolina-hurricanes","name":"Carolina Hurricanes"},{"type":"team","id":"columbus-blue-jackets","name":"Columbus Blue Jackets"},{"type":"team","id":"new-jersey-devils","name":"New Jersey Devils"},{"type":"team","id":"new-york-islanders","name":"New York Islanders"},{"type":"team","id":"new-york-rangers","name":"New York Rangers"},{"type":"team","id":"philadelphia-flyers","name":"Philadelphia Flyers"},{"type":"team","id":"pittsburgh-penguins","name":"Pittsburgh Penguins"},{"type":"team","id":"washington-capitals","name":"Washington Capitals"}]}]},{"type":"group","id":"western-conference","name":"Western Conference","subtitle":"","children":[{"type":"group","id":"central","name":"Central","subtitle":"","children":[{"type":"team","id":"chicago-blackhawks","name":"Chicago Blackhawks"},{"type":"team","id":"colorado-avalanche","name":"Colorado Avalanche"},{"type":"team","id":"dallas-stars","name":"Dallas Stars"},{"type":"team","id":"minnesota-wild","name":"Minnesota Wild"},{"type":"team","id":"nashville-predators","name":"Nashville Predators"},{"type":"team","id":"st-louis-blues","name":"St. Louis Blues"},{"type":"team","id":"utah-mammoth","name":"Utah Mammoth"},{"type":"team","id":"winnipeg-jets","name":"Winnipeg Jets"}]},{"type":"group","id":"pacific","name":"Pacific","subtitle":"","children":[{"type":"team","id":"anaheim-ducks","name":"Anaheim Ducks"},{"type":"team","id":"calgary-flames","name":"Calgary Flames"},{"type":"team","id":"edmonton-oilers","name":"Edmonton Oilers"},{"type":"team","id":"los-angeles-kings","name":"Los Angeles Kings"},{"type":"team","id":"san-jose-sharks","name":"San Jose Sharks"},{"type":"team","id":"seattle-kraken","name":"Seattle Kraken"},{"type":"team","id":"vancouver-canucks","name":"Vancouver Canucks"},{"type":"team","id":"vegas-golden-knights","name":"Vegas Golden Knights"}]}]}]},{"type":"group","id":"college-basketball-march-madness","name":"College Basketball / March Madness","subtitle":"College basketball and tournament directory","children":[{"type":"group","id":"men-s-division-i","name":"Men's Division I","subtitle":"","children":[{"type":"group","id":"acc","name":"ACC","subtitle":"","children":[{"type":"team","id":"clemson-men-s-basketball","name":"Clemson Men's Basketball"},{"type":"team","id":"duke-men-s-basketball","name":"Duke Men's Basketball"},{"type":"team","id":"florida-state-men-s-basketball","name":"Florida State Men's Basketball"},{"type":"team","id":"louisville-men-s-basketball","name":"Louisville Men's Basketball"},{"type":"team","id":"miami-men-s-basketball","name":"Miami Men's Basketball"},{"type":"team","id":"nc-state-men-s-basketball","name":"NC State Men's Basketball"},{"type":"team","id":"north-carolina-men-s-basketball","name":"North Carolina Men's Basketball"},{"type":"team","id":"notre-dame-men-s-basketball","name":"Notre Dame Men's Basketball"},{"type":"team","id":"syracuse-men-s-basketball","name":"Syracuse Men's Basketball"},{"type":"team","id":"virginia-men-s-basketball","name":"Virginia Men's Basketball"},{"type":"team","id":"wake-forest-men-s-basketball","name":"Wake Forest Men's Basketball"}]},{"type":"group","id":"big-east","name":"Big East","subtitle":"","children":[{"type":"team","id":"butler-men-s-basketball","name":"Butler Men's Basketball"},{"type":"team","id":"uconn-men-s-basketball","name":"UConn Men's Basketball"},{"type":"team","id":"creighton-men-s-basketball","name":"Creighton Men's Basketball"},{"type":"team","id":"georgetown-men-s-basketball","name":"Georgetown Men's Basketball"},{"type":"team","id":"marquette-men-s-basketball","name":"Marquette Men's Basketball"},{"type":"team","id":"providence-men-s-basketball","name":"Providence Men's Basketball"},{"type":"team","id":"seton-hall-men-s-basketball","name":"Seton Hall Men's Basketball"},{"type":"team","id":"st-john-s-men-s-basketball","name":"St. John's Men's Basketball"},{"type":"team","id":"villanova-men-s-basketball","name":"Villanova Men's Basketball"},{"type":"team","id":"xavier-men-s-basketball","name":"Xavier Men's Basketball"}]},{"type":"group","id":"big-ten","name":"Big Ten","subtitle":"","children":[{"type":"team","id":"illinois-men-s-basketball","name":"Illinois Men's Basketball"},{"type":"team","id":"indiana-men-s-basketball","name":"Indiana Men's Basketball"},{"type":"team","id":"iowa-men-s-basketball","name":"Iowa Men's Basketball"},{"type":"team","id":"michigan-men-s-basketball","name":"Michigan Men's Basketball"},{"type":"team","id":"michigan-state-men-s-basketball","name":"Michigan State Men's Basketball"},{"type":"team","id":"nebraska-men-s-basketball","name":"Nebraska Men's Basketball"},{"type":"team","id":"ohio-state-men-s-basketball","name":"Ohio State Men's Basketball"},{"type":"team","id":"oregon-men-s-basketball","name":"Oregon Men's Basketball"},{"type":"team","id":"purdue-men-s-basketball","name":"Purdue Men's Basketball"},{"type":"team","id":"ucla-men-s-basketball","name":"UCLA Men's Basketball"},{"type":"team","id":"usc-men-s-basketball","name":"USC Men's Basketball"},{"type":"team","id":"wisconsin-men-s-basketball","name":"Wisconsin Men's Basketball"}]},{"type":"group","id":"big-12","name":"Big 12","subtitle":"","children":[{"type":"team","id":"arizona-men-s-basketball","name":"Arizona Men's Basketball"},{"type":"team","id":"baylor-men-s-basketball","name":"Baylor Men's Basketball"},{"type":"team","id":"byu-men-s-basketball","name":"BYU Men's Basketball"},{"type":"team","id":"houston-men-s-basketball","name":"Houston Men's Basketball"},{"type":"team","id":"iowa-state-men-s-basketball","name":"Iowa State Men's Basketball"},{"type":"team","id":"kansas-men-s-basketball","name":"Kansas Men's Basketball"},{"type":"team","id":"kansas-state-men-s-basketball","name":"Kansas State Men's Basketball"},{"type":"team","id":"tcu-men-s-basketball","name":"TCU Men's Basketball"},{"type":"team","id":"texas-tech-men-s-basketball","name":"Texas Tech Men's Basketball"},{"type":"team","id":"ucf-men-s-basketball","name":"UCF Men's Basketball"},{"type":"team","id":"west-virginia-men-s-basketball","name":"West Virginia Men's Basketball"}]},{"type":"group","id":"sec","name":"SEC","subtitle":"","children":[{"type":"team","id":"alabama-men-s-basketball","name":"Alabama Men's Basketball"},{"type":"team","id":"arkansas-men-s-basketball","name":"Arkansas Men's Basketball"},{"type":"team","id":"auburn-men-s-basketball","name":"Auburn Men's Basketball"},{"type":"team","id":"florida-men-s-basketball","name":"Florida Men's Basketball"},{"type":"team","id":"kentucky-men-s-basketball","name":"Kentucky Men's Basketball"},{"type":"team","id":"lsu-men-s-basketball","name":"LSU Men's Basketball"},{"type":"team","id":"oklahoma-men-s-basketball","name":"Oklahoma Men's Basketball"},{"type":"team","id":"tennessee-men-s-basketball","name":"Tennessee Men's Basketball"},{"type":"team","id":"texas-men-s-basketball","name":"Texas Men's Basketball"},{"type":"team","id":"texas-a-m-men-s-basketball","name":"Texas A&M Men's Basketball"},{"type":"team","id":"vanderbilt-men-s-basketball","name":"Vanderbilt Men's Basketball"}]}]},{"type":"group","id":"women-s-division-i","name":"Women's Division I","subtitle":"","children":[{"type":"group","id":"featured-programs","name":"Featured Programs","subtitle":"","children":[{"type":"team","id":"south-carolina-women-s-basketball","name":"South Carolina Women's Basketball"},{"type":"team","id":"uconn-women-s-basketball","name":"UConn Women's Basketball"},{"type":"team","id":"lsu-women-s-basketball","name":"LSU Women's Basketball"},{"type":"team","id":"iowa-women-s-basketball","name":"Iowa Women's Basketball"},{"type":"team","id":"usc-women-s-basketball","name":"USC Women's Basketball"},{"type":"team","id":"texas-women-s-basketball","name":"Texas Women's Basketball"},{"type":"team","id":"notre-dame-women-s-basketball","name":"Notre Dame Women's Basketball"},{"type":"team","id":"stanford-women-s-basketball","name":"Stanford Women's Basketball"},{"type":"team","id":"ucla-women-s-basketball","name":"UCLA Women's Basketball"},{"type":"team","id":"nc-state-women-s-basketball","name":"NC State Women's Basketball"}]}]},{"type":"group","id":"march-madness","name":"March Madness","subtitle":"","children":[{"type":"group","id":"tournament-browser","name":"Tournament Browser","subtitle":"","children":[{"type":"team","id":"men-s-ncaa-tournament","name":"Men's NCAA Tournament"},{"type":"team","id":"women-s-ncaa-tournament","name":"Women's NCAA Tournament"}]}]}]},{"type":"group","id":"formula-1","name":"Formula 1","subtitle":"Grand Prix schedules, constructors, drivers, results, and standings","children":[{"type":"group","id":"constructors","name":"Constructors","subtitle":"2026 Formula 1 teams","children":[{"type":"team","id":"mercedes","name":"Mercedes"},{"type":"team","id":"ferrari","name":"Ferrari"},{"type":"team","id":"mclaren","name":"McLaren"},{"type":"team","id":"red-bull-racing","name":"Red Bull Racing"},{"type":"team","id":"racing-bulls","name":"Racing Bulls"},{"type":"team","id":"alpine","name":"Alpine"},{"type":"team","id":"haas-f1-team","name":"Haas F1 Team"},{"type":"team","id":"audi","name":"Audi"},{"type":"team","id":"williams","name":"Williams"},{"type":"team","id":"aston-martin","name":"Aston Martin"},{"type":"team","id":"cadillac","name":"Cadillac"}]},{"type":"group","id":"drivers","name":"Drivers","subtitle":"2026 driver directory","children":[{"type":"team","id":"george-russell","name":"George Russell"},{"type":"team","id":"kimi-antonelli","name":"Kimi Antonelli"},{"type":"team","id":"charles-leclerc","name":"Charles Leclerc"},{"type":"team","id":"lewis-hamilton","name":"Lewis Hamilton"},{"type":"team","id":"lando-norris","name":"Lando Norris"},{"type":"team","id":"oscar-piastri","name":"Oscar Piastri"},{"type":"team","id":"max-verstappen","name":"Max Verstappen"},{"type":"team","id":"isack-hadjar","name":"Isack Hadjar"},{"type":"team","id":"liam-lawson","name":"Liam Lawson"},{"type":"team","id":"arvid-lindblad","name":"Arvid Lindblad"},{"type":"team","id":"pierre-gasly","name":"Pierre Gasly"},{"type":"team","id":"franco-colapinto","name":"Franco Colapinto"},{"type":"team","id":"esteban-ocon","name":"Esteban Ocon"},{"type":"team","id":"oliver-bearman","name":"Oliver Bearman"},{"type":"team","id":"nico-h-lkenberg","name":"Nico Hülkenberg"},{"type":"team","id":"gabriel-bortoleto","name":"Gabriel Bortoleto"},{"type":"team","id":"carlos-sainz","name":"Carlos Sainz"},{"type":"team","id":"alexander-albon","name":"Alexander Albon"},{"type":"team","id":"fernando-alonso","name":"Fernando Alonso"},{"type":"team","id":"lance-stroll","name":"Lance Stroll"},{"type":"team","id":"sergio-p-rez","name":"Sergio Pérez"},{"type":"team","id":"valtteri-bottas","name":"Valtteri Bottas"}]}]},{"type":"group","id":"nascar","name":"NASCAR","subtitle":"Cup, Xfinity, and Craftsman Truck Series","children":[{"type":"group","id":"cup-series","name":"Cup Series","subtitle":"","children":[{"type":"group","id":"organizations","name":"Organizations","subtitle":"Full-time Cup Series organizations","children":[{"type":"team","id":"23xi-racing","name":"23XI Racing"},{"type":"team","id":"front-row-motorsports","name":"Front Row Motorsports"},{"type":"team","id":"haas-factory-team","name":"Haas Factory Team"},{"type":"team","id":"hendrick-motorsports","name":"Hendrick Motorsports"},{"type":"team","id":"joe-gibbs-racing","name":"Joe Gibbs Racing"},{"type":"team","id":"kaulig-racing","name":"Kaulig Racing"},{"type":"team","id":"legacy-motor-club","name":"Legacy Motor Club"},{"type":"team","id":"richard-childress-racing","name":"Richard Childress Racing"},{"type":"team","id":"rick-ware-racing","name":"Rick Ware Racing"},{"type":"team","id":"rfk-racing","name":"RFK Racing"},{"type":"team","id":"spire-motorsports","name":"Spire Motorsports"},{"type":"team","id":"team-penske","name":"Team Penske"},{"type":"team","id":"trackhouse-racing","name":"Trackhouse Racing"},{"type":"team","id":"wood-brothers-racing","name":"Wood Brothers Racing"},{"type":"team","id":"hyak-motorsports","name":"Hyak Motorsports"}]},{"type":"group","id":"featured-drivers","name":"Featured Drivers","subtitle":"","children":[{"type":"team","id":"kyle-larson","name":"Kyle Larson"},{"type":"team","id":"chase-elliott","name":"Chase Elliott"},{"type":"team","id":"william-byron","name":"William Byron"},{"type":"team","id":"alex-bowman","name":"Alex Bowman"},{"type":"team","id":"denny-hamlin","name":"Denny Hamlin"},{"type":"team","id":"christopher-bell","name":"Christopher Bell"},{"type":"team","id":"chase-briscoe","name":"Chase Briscoe"},{"type":"team","id":"ty-gibbs","name":"Ty Gibbs"},{"type":"team","id":"ryan-blaney","name":"Ryan Blaney"},{"type":"team","id":"joey-logano","name":"Joey Logano"},{"type":"team","id":"austin-cindric","name":"Austin Cindric"},{"type":"team","id":"brad-keselowski","name":"Brad Keselowski"},{"type":"team","id":"chris-buescher","name":"Chris Buescher"},{"type":"team","id":"ryan-preece","name":"Ryan Preece"},{"type":"team","id":"ross-chastain","name":"Ross Chastain"},{"type":"team","id":"daniel-su-rez","name":"Daniel Suárez"},{"type":"team","id":"tyler-reddick","name":"Tyler Reddick"},{"type":"team","id":"bubba-wallace","name":"Bubba Wallace"}]}]},{"type":"group","id":"xfinity-series","name":"Xfinity Series","subtitle":"","children":[{"type":"group","id":"driver-directory","name":"Driver Directory","subtitle":"","children":[{"type":"team","id":"nascar-xfinity-series-drivers","name":"NASCAR Xfinity Series Drivers"}]}]},{"type":"group","id":"craftsman-truck-series","name":"Craftsman Truck Series","subtitle":"","children":[{"type":"group","id":"driver-directory","name":"Driver Directory","subtitle":"","children":[{"type":"team","id":"nascar-craftsman-truck-series-drivers","name":"NASCAR Craftsman Truck Series Drivers"}]}]}]},{"type":"group","id":"wnba","name":"WNBA","subtitle":"Women's National Basketball Association","children":[{"type":"group","id":"teams","name":"Teams","subtitle":"","children":[{"type":"team","id":"atlanta-dream","name":"Atlanta Dream"},{"type":"team","id":"chicago-sky","name":"Chicago Sky"},{"type":"team","id":"connecticut-sun","name":"Connecticut Sun"},{"type":"team","id":"dallas-wings","name":"Dallas Wings"},{"type":"team","id":"golden-state-valkyries","name":"Golden State Valkyries"},{"type":"team","id":"indiana-fever","name":"Indiana Fever"},{"type":"team","id":"las-vegas-aces","name":"Las Vegas Aces"},{"type":"team","id":"los-angeles-sparks","name":"Los Angeles Sparks"},{"type":"team","id":"minnesota-lynx","name":"Minnesota Lynx"},{"type":"team","id":"new-york-liberty","name":"New York Liberty"},{"type":"team","id":"phoenix-mercury","name":"Phoenix Mercury"},{"type":"team","id":"portland-fire","name":"Portland Fire"},{"type":"team","id":"seattle-storm","name":"Seattle Storm"},{"type":"team","id":"toronto-tempo","name":"Toronto Tempo"},{"type":"team","id":"washington-mystics","name":"Washington Mystics"}]}]},{"type":"group","id":"nwsl","name":"NWSL","subtitle":"National Women's Soccer League","children":[{"type":"group","id":"clubs","name":"Clubs","subtitle":"","children":[{"type":"team","id":"angel-city-fc","name":"Angel City FC"},{"type":"team","id":"bay-fc","name":"Bay FC"},{"type":"team","id":"boston-legacy-fc","name":"Boston Legacy FC"},{"type":"team","id":"chicago-stars-fc","name":"Chicago Stars FC"},{"type":"team","id":"denver-summit-fc","name":"Denver Summit FC"},{"type":"team","id":"gotham-fc","name":"Gotham FC"},{"type":"team","id":"houston-dash","name":"Houston Dash"},{"type":"team","id":"kansas-city-current","name":"Kansas City Current"},{"type":"team","id":"north-carolina-courage","name":"North Carolina Courage"},{"type":"team","id":"orlando-pride","name":"Orlando Pride"},{"type":"team","id":"portland-thorns-fc","name":"Portland Thorns FC"},{"type":"team","id":"racing-louisville-fc","name":"Racing Louisville FC"},{"type":"team","id":"san-diego-wave-fc","name":"San Diego Wave FC"},{"type":"team","id":"seattle-reign-fc","name":"Seattle Reign FC"},{"type":"team","id":"utah-royals-fc","name":"Utah Royals FC"},{"type":"team","id":"washington-spirit","name":"Washington Spirit"}]}]},{"type":"group","id":"international-soccer","name":"International Soccer","subtitle":"National teams and international tournaments","children":[{"type":"group","id":"men-s-national-teams","name":"Men's National Teams","subtitle":"","children":[{"type":"group","id":"concacaf","name":"CONCACAF","subtitle":"","children":[{"type":"team","id":"united-states-men-s-national-team","name":"United States Men's National Team"},{"type":"team","id":"mexico-men-s-national-team","name":"Mexico Men's National Team"},{"type":"team","id":"canada-men-s-national-team","name":"Canada Men's National Team"},{"type":"team","id":"costa-rica-men-s-national-team","name":"Costa Rica Men's National Team"},{"type":"team","id":"panama-men-s-national-team","name":"Panama Men's National Team"},{"type":"team","id":"jamaica-men-s-national-team","name":"Jamaica Men's National Team"}]},{"type":"group","id":"uefa","name":"UEFA","subtitle":"","children":[{"type":"team","id":"england-men-s-national-team","name":"England Men's National Team"},{"type":"team","id":"france-men-s-national-team","name":"France Men's National Team"},{"type":"team","id":"germany-men-s-national-team","name":"Germany Men's National Team"},{"type":"team","id":"spain-men-s-national-team","name":"Spain Men's National Team"},{"type":"team","id":"italy-men-s-national-team","name":"Italy Men's National Team"},{"type":"team","id":"netherlands-men-s-national-team","name":"Netherlands Men's National Team"},{"type":"team","id":"portugal-men-s-national-team","name":"Portugal Men's National Team"},{"type":"team","id":"croatia-men-s-national-team","name":"Croatia Men's National Team"}]},{"type":"group","id":"conmebol","name":"CONMEBOL","subtitle":"","children":[{"type":"team","id":"argentina-men-s-national-team","name":"Argentina Men's National Team"},{"type":"team","id":"brazil-men-s-national-team","name":"Brazil Men's National Team"},{"type":"team","id":"uruguay-men-s-national-team","name":"Uruguay Men's National Team"},{"type":"team","id":"colombia-men-s-national-team","name":"Colombia Men's National Team"},{"type":"team","id":"ecuador-men-s-national-team","name":"Ecuador Men's National Team"},{"type":"team","id":"chile-men-s-national-team","name":"Chile Men's National Team"}]},{"type":"group","id":"afc","name":"AFC","subtitle":"","children":[{"type":"team","id":"japan-men-s-national-team","name":"Japan Men's National Team"},{"type":"team","id":"south-korea-men-s-national-team","name":"South Korea Men's National Team"},{"type":"team","id":"australia-men-s-national-team","name":"Australia Men's National Team"},{"type":"team","id":"saudi-arabia-men-s-national-team","name":"Saudi Arabia Men's National Team"}]},{"type":"group","id":"caf","name":"CAF","subtitle":"","children":[{"type":"team","id":"morocco-men-s-national-team","name":"Morocco Men's National Team"},{"type":"team","id":"senegal-men-s-national-team","name":"Senegal Men's National Team"},{"type":"team","id":"egypt-men-s-national-team","name":"Egypt Men's National Team"},{"type":"team","id":"nigeria-men-s-national-team","name":"Nigeria Men's National Team"},{"type":"team","id":"ivory-coast-men-s-national-team","name":"Ivory Coast Men's National Team"}]}]},{"type":"group","id":"women-s-national-teams","name":"Women's National Teams","subtitle":"","children":[{"type":"group","id":"featured-teams","name":"Featured Teams","subtitle":"","children":[{"type":"team","id":"united-states-women-s-national-team","name":"United States Women's National Team"},{"type":"team","id":"canada-women-s-national-team","name":"Canada Women's National Team"},{"type":"team","id":"england-women-s-national-team","name":"England Women's National Team"},{"type":"team","id":"spain-women-s-national-team","name":"Spain Women's National Team"},{"type":"team","id":"germany-women-s-national-team","name":"Germany Women's National Team"},{"type":"team","id":"france-women-s-national-team","name":"France Women's National Team"},{"type":"team","id":"brazil-women-s-national-team","name":"Brazil Women's National Team"},{"type":"team","id":"japan-women-s-national-team","name":"Japan Women's National Team"},{"type":"team","id":"australia-women-s-national-team","name":"Australia Women's National Team"},{"type":"team","id":"sweden-women-s-national-team","name":"Sweden Women's National Team"}]}]},{"type":"group","id":"tournaments","name":"Tournaments","subtitle":"Group stages and knockout tournaments","children":[{"type":"team","id":"fifa-world-cup","name":"FIFA World Cup"},{"type":"team","id":"fifa-women-s-world-cup","name":"FIFA Women's World Cup"},{"type":"team","id":"concacaf-gold-cup","name":"CONCACAF Gold Cup"},{"type":"team","id":"uefa-european-championship","name":"UEFA European Championship"},{"type":"team","id":"copa-am-rica","name":"Copa América"},{"type":"team","id":"uefa-nations-league","name":"UEFA Nations League"},{"type":"team","id":"concacaf-nations-league","name":"CONCACAF Nations League"}]}]},{"type":"group","id":"college-softball","name":"College Softball","subtitle":"Division I conferences and the Women's College World Series","children":[{"type":"group","id":"ncaa-division-i","name":"NCAA Division I","subtitle":"","children":[{"type":"group","id":"sec","name":"SEC","subtitle":"","children":[{"type":"team","id":"alabama-softball","name":"Alabama Softball"},{"type":"team","id":"arkansas-softball","name":"Arkansas Softball"},{"type":"team","id":"auburn-softball","name":"Auburn Softball"},{"type":"team","id":"florida-softball","name":"Florida Softball"},{"type":"team","id":"georgia-softball","name":"Georgia Softball"},{"type":"team","id":"kentucky-softball","name":"Kentucky Softball"},{"type":"team","id":"lsu-softball","name":"LSU Softball"},{"type":"team","id":"mississippi-state-softball","name":"Mississippi State Softball"},{"type":"team","id":"missouri-softball","name":"Missouri Softball"},{"type":"team","id":"oklahoma-softball","name":"Oklahoma Softball"},{"type":"team","id":"ole-miss-softball","name":"Ole Miss Softball"},{"type":"team","id":"south-carolina-softball","name":"South Carolina Softball"},{"type":"team","id":"tennessee-softball","name":"Tennessee Softball"},{"type":"team","id":"texas-softball","name":"Texas Softball"},{"type":"team","id":"texas-a-m-softball","name":"Texas A&M Softball"},{"type":"team","id":"vanderbilt-softball","name":"Vanderbilt Softball"}]},{"type":"group","id":"acc","name":"ACC","subtitle":"","children":[{"type":"team","id":"boston-college-softball","name":"Boston College Softball"},{"type":"team","id":"california-softball","name":"California Softball"},{"type":"team","id":"clemson-softball","name":"Clemson Softball"},{"type":"team","id":"duke-softball","name":"Duke Softball"},{"type":"team","id":"florida-state-softball","name":"Florida State Softball"},{"type":"team","id":"georgia-tech-softball","name":"Georgia Tech Softball"},{"type":"team","id":"louisville-softball","name":"Louisville Softball"},{"type":"team","id":"north-carolina-softball","name":"North Carolina Softball"},{"type":"team","id":"nc-state-softball","name":"NC State Softball"},{"type":"team","id":"notre-dame-softball","name":"Notre Dame Softball"},{"type":"team","id":"pittsburgh-softball","name":"Pittsburgh Softball"},{"type":"team","id":"stanford-softball","name":"Stanford Softball"},{"type":"team","id":"syracuse-softball","name":"Syracuse Softball"},{"type":"team","id":"virginia-softball","name":"Virginia Softball"},{"type":"team","id":"virginia-tech-softball","name":"Virginia Tech Softball"}]},{"type":"group","id":"big-12","name":"Big 12","subtitle":"","children":[{"type":"team","id":"arizona-softball","name":"Arizona Softball"},{"type":"team","id":"arizona-state-softball","name":"Arizona State Softball"},{"type":"team","id":"baylor-softball","name":"Baylor Softball"},{"type":"team","id":"byu-softball","name":"BYU Softball"},{"type":"team","id":"houston-softball","name":"Houston Softball"},{"type":"team","id":"iowa-state-softball","name":"Iowa State Softball"},{"type":"team","id":"kansas-softball","name":"Kansas Softball"},{"type":"team","id":"oklahoma-state-softball","name":"Oklahoma State Softball"},{"type":"team","id":"texas-tech-softball","name":"Texas Tech Softball"},{"type":"team","id":"ucf-softball","name":"UCF Softball"},{"type":"team","id":"utah-softball","name":"Utah Softball"}]},{"type":"group","id":"big-ten","name":"Big Ten","subtitle":"","children":[{"type":"team","id":"illinois-softball","name":"Illinois Softball"},{"type":"team","id":"indiana-softball","name":"Indiana Softball"},{"type":"team","id":"iowa-softball","name":"Iowa Softball"},{"type":"team","id":"maryland-softball","name":"Maryland Softball"},{"type":"team","id":"michigan-softball","name":"Michigan Softball"},{"type":"team","id":"michigan-state-softball","name":"Michigan State Softball"},{"type":"team","id":"minnesota-softball","name":"Minnesota Softball"},{"type":"team","id":"nebraska-softball","name":"Nebraska Softball"},{"type":"team","id":"northwestern-softball","name":"Northwestern Softball"},{"type":"team","id":"ohio-state-softball","name":"Ohio State Softball"},{"type":"team","id":"oregon-softball","name":"Oregon Softball"},{"type":"team","id":"penn-state-softball","name":"Penn State Softball"},{"type":"team","id":"purdue-softball","name":"Purdue Softball"},{"type":"team","id":"rutgers-softball","name":"Rutgers Softball"},{"type":"team","id":"ucla-softball","name":"UCLA Softball"},{"type":"team","id":"washington-softball","name":"Washington Softball"},{"type":"team","id":"wisconsin-softball","name":"Wisconsin Softball"}]},{"type":"group","id":"featured-programs","name":"Featured Programs","subtitle":"","children":[{"type":"team","id":"oklahoma-state-softball","name":"Oklahoma State Softball"},{"type":"team","id":"florida-state-softball","name":"Florida State Softball"},{"type":"team","id":"stanford-softball","name":"Stanford Softball"},{"type":"team","id":"louisiana-softball","name":"Louisiana Softball"},{"type":"team","id":"wichita-state-softball","name":"Wichita State Softball"},{"type":"team","id":"south-florida-softball","name":"South Florida Softball"},{"type":"team","id":"liberty-softball","name":"Liberty Softball"},{"type":"team","id":"grand-canyon-softball","name":"Grand Canyon Softball"}]}]}]},{"type":"group","id":"rugby","name":"Rugby","subtitle":"International and club rugby union and rugby league","children":[{"type":"group","id":"rugby-union","name":"Rugby Union","subtitle":"","children":[{"type":"group","id":"international","name":"International","subtitle":"","children":[{"type":"group","id":"six-nations","name":"Six Nations","subtitle":"","children":[{"type":"team","id":"england-rugby","name":"England Rugby"},{"type":"team","id":"france-rugby","name":"France Rugby"},{"type":"team","id":"ireland-rugby","name":"Ireland Rugby"},{"type":"team","id":"italy-rugby","name":"Italy Rugby"},{"type":"team","id":"scotland-rugby","name":"Scotland Rugby"},{"type":"team","id":"wales-rugby","name":"Wales Rugby"}]},{"type":"group","id":"southern-hemisphere","name":"Southern Hemisphere","subtitle":"","children":[{"type":"team","id":"argentina-rugby","name":"Argentina Rugby"},{"type":"team","id":"australia-rugby","name":"Australia Rugby"},{"type":"team","id":"new-zealand-rugby","name":"New Zealand Rugby"},{"type":"team","id":"south-africa-rugby","name":"South Africa Rugby"}]},{"type":"group","id":"rugby-world-cup","name":"Rugby World Cup","subtitle":"","children":[{"type":"team","id":"argentina-rugby","name":"Argentina Rugby"},{"type":"team","id":"australia-rugby","name":"Australia Rugby"},{"type":"team","id":"england-rugby","name":"England Rugby"},{"type":"team","id":"fiji-rugby","name":"Fiji Rugby"},{"type":"team","id":"france-rugby","name":"France Rugby"},{"type":"team","id":"ireland-rugby","name":"Ireland Rugby"},{"type":"team","id":"italy-rugby","name":"Italy Rugby"},{"type":"team","id":"japan-rugby","name":"Japan Rugby"},{"type":"team","id":"new-zealand-rugby","name":"New Zealand Rugby"},{"type":"team","id":"scotland-rugby","name":"Scotland Rugby"},{"type":"team","id":"south-africa-rugby","name":"South Africa Rugby"},{"type":"team","id":"tonga-rugby","name":"Tonga Rugby"},{"type":"team","id":"united-states-rugby","name":"United States Rugby"},{"type":"team","id":"uruguay-rugby","name":"Uruguay Rugby"},{"type":"team","id":"wales-rugby","name":"Wales Rugby"}]},{"type":"group","id":"women-s-international","name":"Women's International","subtitle":"","children":[{"type":"team","id":"england-women-s-rugby","name":"England Women's Rugby"},{"type":"team","id":"france-women-s-rugby","name":"France Women's Rugby"},{"type":"team","id":"ireland-women-s-rugby","name":"Ireland Women's Rugby"},{"type":"team","id":"new-zealand-women-s-rugby","name":"New Zealand Women's Rugby"},{"type":"team","id":"scotland-women-s-rugby","name":"Scotland Women's Rugby"},{"type":"team","id":"south-africa-women-s-rugby","name":"South Africa Women's Rugby"},{"type":"team","id":"united-states-women-s-rugby","name":"United States Women's Rugby"},{"type":"team","id":"wales-women-s-rugby","name":"Wales Women's Rugby"}]}]},{"type":"group","id":"prem-rugby","name":"PREM Rugby","subtitle":"England's top professional rugby union league","children":[{"type":"team","id":"bath-rugby","name":"Bath Rugby"},{"type":"team","id":"bristol-bears","name":"Bristol Bears"},{"type":"team","id":"exeter-chiefs","name":"Exeter Chiefs"},{"type":"team","id":"gloucester-rugby","name":"Gloucester Rugby"},{"type":"team","id":"harlequins","name":"Harlequins"},{"type":"team","id":"leicester-tigers","name":"Leicester Tigers"},{"type":"team","id":"newcastle-red-bulls","name":"Newcastle Red Bulls"},{"type":"team","id":"northampton-saints","name":"Northampton Saints"},{"type":"team","id":"sale-sharks","name":"Sale Sharks"},{"type":"team","id":"saracens","name":"Saracens"}]},{"type":"group","id":"united-rugby-championship","name":"United Rugby Championship","subtitle":"Clubs from Ireland, Italy, Scotland, South Africa, and Wales","children":[{"type":"team","id":"benetton-rugby","name":"Benetton Rugby"},{"type":"team","id":"bulls-rugby","name":"Bulls Rugby"},{"type":"team","id":"cardiff-rugby","name":"Cardiff Rugby"},{"type":"team","id":"connacht-rugby","name":"Connacht Rugby"},{"type":"team","id":"dragons-rfc","name":"Dragons RFC"},{"type":"team","id":"edinburgh-rugby","name":"Edinburgh Rugby"},{"type":"team","id":"glasgow-warriors","name":"Glasgow Warriors"},{"type":"team","id":"leinster-rugby","name":"Leinster Rugby"},{"type":"team","id":"lions-rugby","name":"Lions Rugby"},{"type":"team","id":"munster-rugby","name":"Munster Rugby"},{"type":"team","id":"ospreys","name":"Ospreys"},{"type":"team","id":"scarlets","name":"Scarlets"},{"type":"team","id":"sharks-rugby","name":"Sharks Rugby"},{"type":"team","id":"stormers-rugby","name":"Stormers Rugby"},{"type":"team","id":"ulster-rugby","name":"Ulster Rugby"},{"type":"team","id":"zebre-parma","name":"Zebre Parma"}]},{"type":"group","id":"super-rugby-pacific","name":"Super Rugby Pacific","subtitle":"Australia, New Zealand, Fiji, and Pacific competition","children":[{"type":"team","id":"blues-rugby","name":"Blues Rugby"},{"type":"team","id":"brumbies","name":"Brumbies"},{"type":"team","id":"chiefs-rugby","name":"Chiefs Rugby"},{"type":"team","id":"crusaders","name":"Crusaders"},{"type":"team","id":"fijian-drua","name":"Fijian Drua"},{"type":"team","id":"highlanders","name":"Highlanders"},{"type":"team","id":"hurricanes","name":"Hurricanes"},{"type":"team","id":"moana-pasifika","name":"Moana Pasifika"},{"type":"team","id":"nsw-waratahs","name":"NSW Waratahs"},{"type":"team","id":"queensland-reds","name":"Queensland Reds"},{"type":"team","id":"western-force","name":"Western Force"}]},{"type":"group","id":"major-league-rugby","name":"Major League Rugby","subtitle":"North America's professional rugby union league","children":[{"type":"team","id":"anthem-rc","name":"Anthem RC"},{"type":"team","id":"california-legion","name":"California Legion"},{"type":"team","id":"chicago-hounds","name":"Chicago Hounds"},{"type":"team","id":"new-england-free-jacks","name":"New England Free Jacks"},{"type":"team","id":"old-glory-dc","name":"Old Glory DC"},{"type":"team","id":"seattle-seawolves","name":"Seattle Seawolves"}]}]},{"type":"group","id":"rugby-league","name":"Rugby League","subtitle":"","children":[{"type":"group","id":"nrl","name":"NRL","subtitle":"","children":[{"type":"team","id":"brisbane-broncos","name":"Brisbane Broncos"},{"type":"team","id":"canberra-raiders","name":"Canberra Raiders"},{"type":"team","id":"canterbury-bankstown-bulldogs","name":"Canterbury-Bankstown Bulldogs"},{"type":"team","id":"cronulla-sutherland-sharks","name":"Cronulla-Sutherland Sharks"},{"type":"team","id":"dolphins","name":"Dolphins"},{"type":"team","id":"gold-coast-titans","name":"Gold Coast Titans"},{"type":"team","id":"manly-warringah-sea-eagles","name":"Manly Warringah Sea Eagles"},{"type":"team","id":"melbourne-storm","name":"Melbourne Storm"},{"type":"team","id":"new-zealand-warriors","name":"New Zealand Warriors"},{"type":"team","id":"newcastle-knights","name":"Newcastle Knights"},{"type":"team","id":"north-queensland-cowboys","name":"North Queensland Cowboys"},{"type":"team","id":"parramatta-eels","name":"Parramatta Eels"},{"type":"team","id":"penrith-panthers","name":"Penrith Panthers"},{"type":"team","id":"south-sydney-rabbitohs","name":"South Sydney Rabbitohs"},{"type":"team","id":"st-george-illawarra-dragons","name":"St. George Illawarra Dragons"},{"type":"team","id":"sydney-roosters","name":"Sydney Roosters"},{"type":"team","id":"wests-tigers","name":"Wests Tigers"}]},{"type":"group","id":"super-league","name":"Super League","subtitle":"","children":[{"type":"team","id":"bradford-bulls","name":"Bradford Bulls"},{"type":"team","id":"castleford-tigers","name":"Castleford Tigers"},{"type":"team","id":"catalans-dragons","name":"Catalans Dragons"},{"type":"team","id":"huddersfield-giants","name":"Huddersfield Giants"},{"type":"team","id":"hull-fc","name":"Hull FC"},{"type":"team","id":"hull-kr","name":"Hull KR"},{"type":"team","id":"leeds-rhinos","name":"Leeds Rhinos"},{"type":"team","id":"leigh-leopards","name":"Leigh Leopards"},{"type":"team","id":"salford-red-devils","name":"Salford Red Devils"},{"type":"team","id":"st-helens","name":"St Helens"},{"type":"team","id":"toulouse-olympique","name":"Toulouse Olympique"},{"type":"team","id":"wakefield-trinity","name":"Wakefield Trinity"},{"type":"team","id":"warrington-wolves","name":"Warrington Wolves"},{"type":"team","id":"wigan-warriors","name":"Wigan Warriors"}]},{"type":"group","id":"international-rugby-league","name":"International Rugby League","subtitle":"","children":[{"type":"team","id":"australia-rugby-league","name":"Australia Rugby League"},{"type":"team","id":"england-rugby-league","name":"England Rugby League"},{"type":"team","id":"fiji-rugby-league","name":"Fiji Rugby League"},{"type":"team","id":"france-rugby-league","name":"France Rugby League"},{"type":"team","id":"new-zealand-rugby-league","name":"New Zealand Rugby League"},{"type":"team","id":"papua-new-guinea-rugby-league","name":"Papua New Guinea Rugby League"},{"type":"team","id":"samoa-rugby-league","name":"Samoa Rugby League"},{"type":"team","id":"tonga-rugby-league","name":"Tonga Rugby League"},{"type":"team","id":"united-states-rugby-league","name":"United States Rugby League"}]}]}]}],KEY="arenaFavoritesV1",RECENT_KEY="arenaRecentTeamsV1",PLAYER_KEY="arenaFavoritePlayersV1",GAME_KEY="arenaSavedGamesV1",TABS=["Overview","Schedule","Roster","Players","Statistics","Standings","News"];let path=[];
+let current=null;
+let tab="Overview";
+
+/*
+ * Saves the directory's scroll position before a team page opens.
+ * The Back button restores this position later.
+ */
+let directoryScrollPosition=0;
+
+/* Favorite team paths saved in localStorage. */
+let favs=load();
+
+/* Recently viewed team paths saved separately from favorites. */
+let recents=loadRecents();
+
+/* Players starred inside roster/player pages. */
+let favoritePlayers=readStoredArray(PLAYER_KEY);
+
+/* Games manually saved by the user. */
+let savedGames=readStoredArray(GAME_KEY);
+
+/* The month currently displayed in the schedule calendar. */
+let scheduleCalendarDate=new Date();
+/**
+ * Reads favorite teams from localStorage.
+ * localStorage only stores text, so JSON.parse changes the saved
+ * text back into a JavaScript array.
+ */
+function load(){
+ try{
+  return JSON.parse(localStorage.getItem(KEY))||[];
+ }catch(error){
+  console.warn("Arena could not read favorites:",error);
+  return[];
+ }
+}
+
+/** Saves the current favorites array to localStorage. */
+function save(){
+ localStorage.setItem(KEY,JSON.stringify(favs));
+}
+
+/** Reads the recently viewed team list from localStorage. */
+function loadRecents(){
+ try{
+  return JSON.parse(localStorage.getItem(RECENT_KEY))||[];
+ }catch(error){
+  console.warn("Arena could not read recent teams:",error);
+  return[];
+ }
+}
+
+/** Saves the recently viewed team list. */
+function saveRecents(){
+ localStorage.setItem(RECENT_KEY,JSON.stringify(recents));
+}
+
+/**
+ * Reads any array-shaped Arena preference from localStorage.
+ */
+function readStoredArray(storageKey){
+ try{
+  const value=JSON.parse(localStorage.getItem(storageKey));
+  return Array.isArray(value)?value:[];
+ }catch(error){
+  console.warn("Arena could not read stored data:",storageKey,error);
+  return[];
+ }
+}
+
+/** Saves favorite-player selections. */
+function saveFavoritePlayers(){
+ localStorage.setItem(PLAYER_KEY,JSON.stringify(favoritePlayers));
+}
+
+/** Saves manually bookmarked games. */
+function saveSavedGames(){
+ localStorage.setItem(GAME_KEY,JSON.stringify(savedGames));
+}
+/**
+ * Creates one unique string for a path through Arena.
+ * Example: NFL/AFC/AFC North/Pittsburgh Steelers
+ */
+function key(p){
+ return p.map(x=>x.id).join("/");
+}function initials(s){return s.split(/\s+/).slice(0,3).map(x=>x[0]).join("").toUpperCase()}
+function color(s){const c=["#4f9dff","#7c5cff","#19b394","#e85d75","#df8f2d","#2aa7b8","#8b73ef"];let n=0;for(const x of s)n=(n+x.charCodeAt(0))%c.length;return c[n]}
+function index(nodes=ROOT,p=[]){let a=[];for(const n of nodes){let q=[...p,n];a.push({node:n,path:q});if(n.children)a=a.concat(index(n.children,q))}return a}const IDX=index();
+/**
+ * Rebuilds a saved path by walking through the directory IDs.
+ * This is how favorites and recent teams survive page reloads.
+ */
+function resolve(saved){
+ let nodes=ROOT,p=[],n;for(const id of saved.ids){n=nodes.find(x=>x.id===id);if(!n)return null;p.push(n);nodes=n.children||[]}return{node:n,path:p}}
+function isFav(p){return favs.some(x=>x.key===key(p))}function toggle(p){const k=key(p),i=favs.findIndex(x=>x.key===k);if(i>=0)favs.splice(i,1);else favs.push({key:k,ids:p.map(x=>x.id)});save();renderFavs();counts();if(current)document.getElementById("teamStar").classList.toggle("on",isFav(current.path))}
+function crumbs(){let h='<button class="crumb" data-i="-1">Home</button>';path.forEach((n,i)=>h+=`<span class="sep">›</span><button class="crumb ${i===path.length-1?"current":""}" data-i="${i}">${n.name}</button>`);crumbsEl.innerHTML=h;crumbsEl.querySelectorAll("[data-i]").forEach(b=>b.onclick=()=>{let i=+b.dataset.i;path=i<0?[]:path.slice(0,i+1);render()})}
+const grid=document.getElementById("grid"),crumbsEl=document.getElementById("crumbs");
+/**
+ * Draws the current directory level.
+ *
+ * At the homepage root, each sport card receives a date-aware season
+ * badge. Nested conference, division, club, and team cards do not
+ * repeat the badge.
+ */
+function show(nodes,searching=false){
+ title.textContent=searching?
+  "Search results":
+  (path.length?path.at(-1).name:"Explore Arena");
+
+ subtitle.textContent=searching?
+  "Select a result to open it.":
+  (path.length?
+   (path.at(-1).subtitle||"Choose the next level."):
+   "Choose a starting point.");
+
+ count.textContent=`${nodes.length} option${nodes.length===1?"":"s"}`;
+
+ if(!nodes.length){
+  grid.innerHTML='<div class="empty">No matching items found.</div>';
+  return;
+ }
+
+ const rootLevel=!searching&&path.length===0;
+
+ grid.innerHTML=nodes.map((item,index)=>{
+  const node=item.node||item;
+  const targetPath=item.path||[...path,node];
+  const isTeam=node.type==="team";
+  const accent=color(node.name);
+
+  return`<article class="card" style="--accent:${accent}" data-card="${index}">
+   <div class="top">
+    <div class="icon">
+     ${isTeam?
+      initials(node.name):
+      (node.name.match(/\b[A-Z]/g)||["A"]).slice(0,3).join("")}
+    </div>
+
+    ${isTeam?`
+     <button class="star ${isFav(targetPath)?"on":""}" data-star="${index}">
+      ★
+     </button>
+    `:""}
+   </div>
+
+   <h3>${escapeHtml(node.name)}</h3>
+   <p>${escapeHtml(node.subtitle||(isTeam?"Open team dashboard":"Browse the next level"))}</p>
+
+   ${sportStatusHtml(node,rootLevel)}
+
+   <div class="open">${isTeam?"Open team":"Explore"} →</div>
+  </article>`;
+ }).join("");
+
+ grid.querySelectorAll("[data-card]").forEach(card=>{
+  card.onclick=event=>{
+   if(event.target.closest("[data-star]"))return;
+
+   const item=nodes[Number(card.dataset.card)];
+   const node=item.node||item;
+   const targetPath=item.path||[...path,node];
+
+   if(node.type==="team"){
+    openTeam(node,targetPath);
+   }else{
+    path=targetPath;
+    search.value="";
+    /*
+     * Keep the user's current viewport when drilling into a league,
+     * conference, division, or other directory level.
+     */
+    render();
+   }
+  };
+ });
+
+ grid.querySelectorAll("[data-star]").forEach(button=>{
+  button.onclick=()=>{
+   const item=nodes[Number(button.dataset.star)];
+   const targetPath=item.path||[...path,(item.node||item)];
+   toggle(targetPath);
+   show(nodes,searching);
+  };
+ });
+}
+
+/**
+ * Adds a team to the recently viewed list.
+ * Arena stores only the latest eight teams.
+ */
+function addRecent(teamPath){
+ const saved={
+  key:key(teamPath),
+  ids:teamPath.map(item=>item.id)
+ };
+
+ recents=recents.filter(item=>item.key!==saved.key);
+ recents.unshift(saved);
+ recents=recents.slice(0,8);
+
+ saveRecents();
+ renderRecents();
+ counts();
+}
+
+/** Updates the small summary values on the home page. */
+function counts(){
+ favCount.textContent=favs.length;
+ recentCount.textContent=recents.length;
+}
+function render(){crumbs();show(path.length?path.at(-1).children:ROOT);notice.classList.toggle("hidden",!path.some(n=>/College|NCAA|FBS|March/.test(n.name)));renderFavs();renderFavoritePlayers();renderRecents();renderFavoriteTimeline();counts()}
+
+/* ================================================================
+   LIVE LEAGUE CONFIGURATION
+
+   Each top-level Arena sport maps to the sport family and league code
+   expected by ESPN's website feeds.
+
+   European domestic soccer codes:
+   - eng.1 = Premier League
+   - ger.1 = Bundesliga
+   - esp.1 = La Liga
+   - ita.1 = Serie A
+   - fra.1 = Ligue 1
+
+   Because all five competitions share the same soccer data shape,
+   Arena can reuse one team resolver and one set of dashboard renderers.
+   ================================================================ */
+
+const LIVE_CONFIG={
+ "MLB":{sport:"baseball",league:"mlb"},
+ "Premier League":{sport:"soccer",league:"eng.1"},
+ "Bundesliga":{sport:"soccer",league:"ger.1"},
+ "La Liga":{sport:"soccer",league:"esp.1"},
+ "Serie A":{sport:"soccer",league:"ita.1"},
+ "Ligue 1":{sport:"soccer",league:"fra.1"},
+ "Champions League":{sport:"soccer",league:"uefa.champions"},
+ "NBA":{sport:"basketball",league:"nba"},
+ "NFL":{sport:"football",league:"nfl"},
+ "College Football":{sport:"football",league:"college-football"},
+ "College Baseball":{sport:"baseball",league:"college-baseball"},
+ "MLS":{sport:"soccer",league:"usa.1"},
+ "NHL":{sport:"hockey",league:"nhl"},
+ "College Basketball / March Madness":{sport:"basketball",league:"mens-college-basketball"},
+ "Formula 1":{sport:"racing",league:"f1"},
+ "NASCAR":{sport:"racing",league:"nascar"},
+ "WNBA":{sport:"basketball",league:"wnba"},
+ "NWSL":{sport:"soccer",league:"usa.nwsl"},
+ "International Soccer":{sport:"soccer",league:"fifa"},
+ "College Softball":{sport:"softball",league:"college-softball"}
+};
+
+/* ================================================================
+   RUGBY LIVE-DATA CONFIGURATION
+
+   Rugby contains several independent competitions beneath one
+   top-level category. Arena checks the full breadcrumb path and
+   selects a feed based on the chosen competition.
+   ================================================================ */
+
+const RUGBY_LIVE_CONFIG={
+ "PREM Rugby":{sport:"rugby",league:"premiership-rugby"},
+ "United Rugby Championship":{sport:"rugby",league:"united-rugby-championship"},
+ "Super Rugby Pacific":{sport:"rugby",league:"super-rugby"},
+ "Major League Rugby":{sport:"rugby",league:"major-league-rugby"},
+ "Six Nations":{sport:"rugby",league:"six-nations"},
+ "Rugby World Cup":{sport:"rugby",league:"rugby-world-cup"},
+ "NRL":{sport:"rugby-league",league:"nrl"},
+ "Super League":{sport:"rugby-league",league:"super-league"}
+};
+
+function rugbyLeagueConfig(){
+ if(rootName()!=="Rugby")return null;
+ for(const item of current.path){
+  if(RUGBY_LIVE_CONFIG[item.name])return RUGBY_LIVE_CONFIG[item.name];
+ }
+ return null;
+}
+
+const liveCache=new Map();
+
+function rootName(){return current?.path?.[0]?.name||""}
+function cleanTeamName(name){
+ return name.replace(/\s+(Football|Baseball|Men's Basketball|Women's Basketball)$/i,"")
+            .replace(/^Men's NCAA Tournament$/i,"NCAA Tournament")
+            .replace(/^Women's NCAA Tournament$/i,"NCAA Women's Tournament").trim()
+}
+function normalizeName(name){return String(name||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]/g,"")}
+/**
+ * Returns the correct live-feed mapping for the selected page.
+ * Rugby uses nested competition mappings rather than one root feed.
+ */
+function leagueConfig(){
+ if(rootName()==="Rugby")return rugbyLeagueConfig();
+
+ let config=LIVE_CONFIG[rootName()];
+
+ if(
+  rootName()==="College Basketball / March Madness"&&
+  current.path.some(item=>item.name.includes("Women's"))
+ ){
+  return{sport:"basketball",league:"womens-college-basketball"};
+ }
+
+ return config;
+}
+function apiBase(c){return`https://site.api.espn.com/apis/site/v2/sports/${c.sport}/${c.league}`}
+/**
+ * Downloads JSON from one sports-feed URL.
+ * fetch() returns a Promise, so this function is asynchronous.
+ */
+async function getJson(url){
+ const r=await fetch(url);
+ if(!r.ok)throw new Error(`Sports feed returned ${r.status}`);
+ return r.json();
+}
+function loading(title="Loading current sports data"){
+ body.innerHTML=`<div class="loading"><div class="spinner"></div><strong>${title}…</strong></div>`;
+}
+function apiError(err){
+ const name=current.node.name;
+ body.innerHTML=`<div class="panels"><section class="panel s12"><h3>Current data could not load</h3><div class="errorBox"><strong>${err.message||"The sports feed was unavailable."}</strong><br><br>Open Arena through GitHub Pages or another web host for the best live-data compatibility. Some browsers block internet requests from files opened directly with a <code>file://</code> address.</div><div class="links" style="margin-top:14px"><a class="link primary" target="_blank" rel="noopener" href="https://www.espn.com/search/_/q/${encodeURIComponent(name)}">View current ${name} coverage</a></div></section></div>`;
+}
+function teamCandidates(data){
+ const list=[];
+ const add=x=>{if(x&&typeof x==="object"&&(x.id||x.uid)&&(x.displayName||x.name||x.shortDisplayName))list.push(x)};
+ (data?.sports||[]).forEach(s=>(s.leagues||[]).forEach(l=>(l.teams||[]).forEach(t=>add(t.team||t))));
+ (data?.teams||[]).forEach(t=>add(t.team||t));
+ return list;
+}
+function scoreCandidate(team,wanted){
+ const names=[team.displayName,team.name,team.shortDisplayName,team.location,team.nickname,team.abbreviation].filter(Boolean).map(normalizeName);
+ const q=normalizeName(wanted);
+ let score=0;
+ for(const n of names){if(n===q)score=Math.max(score,100);else if(n.includes(q)||q.includes(n))score=Math.max(score,70);else{
+   const words=q.match(/[a-z0-9]{3,}/g)||[];score=Math.max(score,words.filter(w=>n.includes(w)).length*10);
+ }}
+ return score;
+}
+/**
+ * Matches Arena's selected team name to the correct team ID
+ * inside the league feed. The team ID is then used for the
+ * schedule, roster, statistics, standings, and news requests.
+ */
+async function resolveLiveTeam(){
+ const c=leagueConfig();
+ if(!c)throw new Error("This Olympic subject does not use a permanent professional-team feed.");
+ const cacheKey=`${c.sport}/${c.league}/teams`;
+ let data=liveCache.get(cacheKey);
+ if(!data){data=await getJson(`${apiBase(c)}/teams?limit=500`);liveCache.set(cacheKey,data)}
+ const wanted=cleanTeamName(current.node.name);
+ const candidates=teamCandidates(data).map(t=>({t,score:scoreCandidate(t,wanted)})).sort((a,b)=>b.score-a.score);
+ if(!candidates.length||candidates[0].score<10)throw new Error(`Could not match "${wanted}" in the current ${rootName()} feed.`);
+ return{config:c,team:candidates[0].t};
+}
+/**
+ * Loads all current information needed by the seven dashboard tabs.
+ *
+ * Promise.all allows the app to request several endpoints together.
+ * Each request has its own fallback so one missing endpoint does not
+ * prevent the rest of the team page from loading.
+ */
+async function loadBundle(){
+ const resolved=await resolveLiveTeam(),{config:c,team:t}=resolved,id=t.id;
+ const k=`${c.sport}/${c.league}/${id}`;
+ if(liveCache.has(k))return liveCache.get(k);
+ const urls={
+  detail:`${apiBase(c)}/teams/${id}`,
+  schedule:`${apiBase(c)}/teams/${id}/schedule`,
+  roster:`${apiBase(c)}/teams/${id}/roster`,
+  statistics:`${apiBase(c)}/teams/${id}/statistics`,
+  standings:`${apiBase(c)}/standings`,
+  news:`${apiBase(c)}/news?team=${id}&limit=30`
+ };
+ const entries=await Promise.all(Object.entries(urls).map(async([key,url])=>{try{return[key,await getJson(url)]}catch(e){return[key,null]}}));
+ const bundle={resolved,...Object.fromEntries(entries),loadedAt:new Date()};
+ liveCache.set(k,bundle);return bundle;
+}
+function escapeHtml(value){return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function allRecords(obj,out=[]){
+ if(!obj||typeof obj!=="object")return out;
+ if(Array.isArray(obj)){obj.forEach(x=>allRecords(x,out));return out}
+ if(obj.summary&&typeof obj.summary==="string"&&(obj.type||obj.name||obj.description))out.push(obj);
+ Object.values(obj).forEach(v=>allRecords(v,out));return out;
+}
+function recordText(bundle){
+ const records=allRecords(bundle.detail||{}).map(r=>r.summary).filter(Boolean);
+ return records[0]||bundle.resolved.team.record?.items?.[0]?.summary||"Record unavailable";
+}
+function logoUrl(bundle){
+ const t=bundle.detail?.team||bundle.resolved.team;
+ return t?.logos?.[0]?.href||t?.logo||"";
+}
+/**
+ * Returns the correct tabs for the selected sport.
+ *
+ * Most playoff sports receive "Postseason." College basketball uses
+ * the more recognizable "March Madness" label instead.
+ */
+function tabsForCurrentSelection(){
+ const sport=rootName();
+ const base=["Overview","Schedule","Roster","Players","Statistics","Standings"];
+
+ if(sport==="College Basketball / March Madness"){
+  base.push("March Madness");
+ }else if([
+  "MLB","NBA","WNBA","NFL","NHL","MLS","NWSL",
+  "College Football","College Baseball","College Softball",
+  "Champions League","NASCAR","International Soccer","Rugby"
+ ].includes(sport)){
+  base.push("Postseason");
+ }
+
+ base.push("News");
+ return base;
+}
+
+function renderTabs(){
+ const availableTabs=tabsForCurrentSelection();
+
+ if(!availableTabs.includes(tab)){
+  tab="Overview";
+ }
+
+ tabs.innerHTML=availableTabs.map(x=>
+  `<button class="tabbtn ${x===tab?"active":""}" data-tab="${x}">${x}</button>`
+ ).join("");
+
+ tabs.querySelectorAll("[data-tab]").forEach(button=>{
+  button.onclick=()=>{
+   tab=button.dataset.tab;
+   renderTabs();
+   renderTab();
+  };
+ });
+}
+/**
+ * Opens a team dashboard without jumping to the top of the document.
+ *
+ * Arena remembers the current directory scroll position. It only
+ * scrolls enough to align the team banner below the sticky header
+ * when the banner would otherwise be outside the visible viewport.
+ */
+function openTeam(n,p){
+ directoryScrollPosition=window.scrollY;
+
+ current={node:n,path:p};
+ browser.classList.add("hidden");
+ team.classList.remove("hidden");
+
+ team.style.setProperty("--team",color(n.name));
+ badge.textContent=initials(n.name);
+ teamName.textContent=n.name;
+ teamPath.textContent=p.slice(0,-1).map(x=>x.name).join(" › ");
+ teamStar.classList.toggle("on",isFav(p));
+
+ tab="Overview";
+ renderTabs();
+ renderTab();
+
+ /*
+  * Wait for the layout to update after hiding the directory and
+  * showing the team page. No scrolling occurs if the banner is
+  * already comfortably visible.
+  */
+ requestAnimationFrame(()=>{
+  const stickyHeader=document.querySelector("header");
+  const headerHeight=stickyHeader?.offsetHeight||0;
+  const rectangle=team.getBoundingClientRect();
+  const visibleTop=headerHeight+8;
+  const visibleBottom=window.innerHeight-20;
+
+  if(
+   rectangle.top<visibleTop||
+   rectangle.top>visibleBottom||
+   rectangle.bottom<visibleTop
+  ){
+   const target=Math.max(
+    0,
+    window.scrollY+rectangle.top-headerHeight-10
+   );
+
+   window.scrollTo({
+    top:target,
+    behavior:"smooth"
+   });
+  }
+ });
+}
+/**
+ * Renders the currently selected team tab.
+ * The same live-data bundle is reused from the cache, which avoids
+ * downloading the same information every time the user changes tabs.
+ */
+async function renderTab(){
+ if(!current)return;
+ loading();
+ try{
+  const bundle=await loadBundle();
+  if(tab==="Overview")renderLiveOverview(bundle);
+  else if(tab==="Schedule")renderLiveSchedule(bundle);
+  else if(tab==="Roster")renderLiveRoster(bundle);
+  else if(tab==="Players")renderLivePlayers(bundle);
+  else if(tab==="Statistics")renderLiveStatistics(bundle);
+  else if(tab==="Standings")renderLiveStandings(bundle);
+  else if(tab==="Postseason")renderPostseason(bundle);
+  else if(tab==="March Madness")renderMarchMadness(bundle);
+  else renderLiveNews(bundle);
+ }catch(err){
+  if(tab==="News")renderFallbackNews(err);else apiError(err);
+ }
+}
+/**
+ * Creates the green live-data status message shown above team data.
+ * It also updates the home screen's "Last live update" field.
+ */
+function liveHeader(bundle){
+ const label=bundle.loadedAt.toLocaleString();
+ document.getElementById("lastUpdatedLabel").textContent=label;
+
+ return`<div class="liveNote">
+  <strong>Live data loaded:</strong> ${label}
+  <span class="sourceLabel">Source: ESPN site feeds</span>
+ </div>`;
+}
+/**
+ * Renders current team information without displaying copyrighted
+ * team logos. Arena uses text, records, colors, and feed metadata.
+ */
+function renderLiveOverview(b){
+ const teamData=b.detail?.team||b.resolved.team;
+ const record=recordText(b);
+ const standing=teamData?.standingSummary||
+                teamData?.rank||
+                teamData?.seed||
+                "See standings tab";
+ const venue=teamData?.venue?.fullName||
+             teamData?.venue?.name||
+             "Venue unavailable";
+ const location=teamData?.location||"";
+ const coach=
+  b.detail?.team?.coach?.displayName||
+  b.detail?.coach?.displayName||
+  b.detail?.team?.headCoach||
+  "Coach information unavailable";
+ const colorValue=teamData?.color?
+  `#${String(teamData.color).replace("#","")}`:
+  color(current.node.name);
+
+ team.style.setProperty("--team",colorValue);
+
+ const franchiseLinks=teamData.links||[];
+
+ body.innerHTML=`${liveHeader(b)}
+  <div class="panels">
+   <section class="panel s8">
+    <h3>${escapeHtml(teamData.displayName||current.node.name)}</h3>
+    <div class="recordBig">${escapeHtml(record)}</div>
+    <p>${escapeHtml(location)} ${escapeHtml(teamData.nickname||"")}</p>
+
+    <div class="metrics">
+     <div class="metric">
+      <small>Standing</small>
+      <strong>${escapeHtml(standing)}</strong>
+     </div>
+     <div class="metric">
+      <small>Venue</small>
+      <strong>${escapeHtml(venue)}</strong>
+     </div>
+     <div class="metric">
+      <small>Head coach</small>
+      <strong>${escapeHtml(coach)}</strong>
+     </div>
+     <div class="metric">
+      <small>Team accent</small>
+      <strong style="color:${colorValue}">● ${escapeHtml(colorValue)}</strong>
+     </div>
+    </div>
+   </section>
+
+   <aside class="panel s4">
+    <h3>Current links</h3>
+    <div class="links">
+     ${franchiseLinks.slice(0,6).map(link=>`
+      <a class="link" target="_blank" rel="noopener"
+       href="${escapeHtml(link.href)}">
+       ${escapeHtml(link.text||link.rel?.[0]||"Team link")}
+      </a>
+     `).join("")||"<p>No direct links were supplied.</p>"}
+    </div>
+   </aside>
+
+   <section class="panel s12">
+    <h3>History and records</h3>
+    <div class="detailGrid">
+     <article class="detailCard">
+      <h4>Team history</h4>
+      <p>Use the official team links above for championships,
+      notable seasons, retired numbers, and franchise history.</p>
+     </article>
+     <article class="detailCard">
+      <h4>Records</h4>
+      <p>The Statistics tab displays current categories returned by
+      the feed. Historical record books vary by league and are linked
+      through official coverage when available.</p>
+     </article>
+     <article class="detailCard">
+      <h4>Stadium or venue</h4>
+      <p>${escapeHtml(venue)}</p>
+      <p>${escapeHtml(location)}</p>
+     </article>
+     <article class="detailCard">
+      <h4>Data source</h4>
+      <p>Current information comes from ESPN website data feeds.
+      Arena does not embed team logos.</p>
+     </article>
+    </div>
+   </section>
+  </div>`;
+}
+function extractEvents(data){
+ return data?.events||data?.team?.nextEvent||[];
+}
+function eventInfo(e,teamId){
+ const comp=e.competitions?.[0]||{},competitors=comp.competitors||[];
+ const mine=competitors.find(c=>String(c.team?.id)===String(teamId));
+ const opp=competitors.find(c=>String(c.team?.id)!==String(teamId));
+ const status=e.status?.type?.shortDetail||e.status?.type?.detail||e.status?.type?.description||"Scheduled";
+ const score=mine?.score&&opp?.score?`${mine.score} - ${opp.score}`:"";
+ const broadcast=(comp.broadcasts||[])
+  .flatMap(item=>item.names||[])
+  .filter(Boolean)
+  .join(", ");
+
+ return{
+  date:e.date?new Date(e.date):null,
+  name:e.shortName||e.name||`${mine?.team?.displayName||""} vs ${opp?.team?.displayName||""}`,
+  opponent:opp?.team?.displayName||"Opponent unavailable",
+  homeAway:mine?.homeAway||"",
+  venue:comp.venue?.fullName||e.venue?.fullName||"",
+  status,
+  score,
+  link:e.links?.[0]?.href||"",
+  broadcast
+ };
+}
+/**
+ * Renders a monthly calendar plus a detailed chronological list.
+ * Today's date receives a purple outline.
+ */
+function renderLiveSchedule(b){
+ const events=extractEvents(b.schedule)
+  .map(event=>eventInfo(event,b.resolved.team.id))
+  .sort((a,z)=>(a.date||0)-(z.date||0));
+
+ body.innerHTML=`${liveHeader(b)}
+  <div class="panels">
+   <section class="panel s12">
+    <div class="calendarToolbar">
+     <div>
+      <h3 id="scheduleMonthTitle"></h3>
+      <p>Today is outlined in purple. Select a game to save it.</p>
+     </div>
+     <div class="calendarNav">
+      <button class="btn" id="calendarPrevious">←</button>
+      <button class="btn" id="calendarToday">Today</button>
+      <button class="btn" id="calendarNext">→</button>
+     </div>
+    </div>
+    <div class="calendarGrid" id="scheduleCalendar"></div>
+   </section>
+
+   <section class="panel s12">
+    <h3>Full schedule</h3>
+    ${events.length?`
+     <div class="eventList">
+      ${events.map((event,index)=>`
+       <article class="event">
+        <div>
+         <strong>${event.date?event.date.toLocaleDateString(undefined,{
+          month:"short",day:"numeric",year:"numeric"
+         }):"Date TBD"}</strong>
+         <small>${event.date?event.date.toLocaleTimeString(undefined,{
+          hour:"numeric",minute:"2-digit"
+         }):""}</small>
+        </div>
+        <div>
+         <strong>${escapeHtml(event.homeAway==="away"?"at":"vs.")} ${escapeHtml(event.opponent)}</strong>
+         <small>${escapeHtml(event.venue)}</small>
+         ${event.broadcast?`<small>Watch: ${escapeHtml(event.broadcast)}</small>`:""}
+        </div>
+        <div>
+         <strong>${escapeHtml(event.score||event.status)}</strong>
+         <small>
+          <button class="saveGameButton ${isSavedGame(event)?"on":""}" data-save-event="${index}">
+           ${isSavedGame(event)?"★ Saved":"☆ Save"}
+          </button>
+         </small>
+        </div>
+       </article>
+      `).join("")}
+     </div>
+    `:"<p>No schedule events were returned for this team.</p>"}
+   </section>
+
+   ${savedGames.length?`
+    <section class="panel s12">
+     <h3>Saved games</h3>
+     <div class="savedGameList">
+      ${savedGames.map(game=>`
+       <article class="savedGame">
+        <div>
+         <strong>${escapeHtml(game.team)} vs. ${escapeHtml(game.opponent)}</strong>
+         <div class="muted">${game.date?new Date(game.date).toLocaleString():"Date TBD"}</div>
+        </div>
+        <span>${escapeHtml(game.score||game.status)}</span>
+       </article>
+      `).join("")}
+     </div>
+    </section>
+   `:""}
+  </div>`;
+
+ body.querySelectorAll("[data-save-event]").forEach(button=>{
+  button.onclick=()=>{
+   toggleSavedGame(events[Number(button.dataset.saveEvent)]);
+  };
+ });
+
+ function drawCalendar(){
+  renderScheduleCalendar(events);
+ }
+
+ document.getElementById("calendarPrevious").onclick=()=>{
+  scheduleCalendarDate=new Date(
+   scheduleCalendarDate.getFullYear(),
+   scheduleCalendarDate.getMonth()-1,
+   1
+  );
+  drawCalendar();
+ };
+
+ document.getElementById("calendarNext").onclick=()=>{
+  scheduleCalendarDate=new Date(
+   scheduleCalendarDate.getFullYear(),
+   scheduleCalendarDate.getMonth()+1,
+   1
+  );
+  drawCalendar();
+ };
+
+ document.getElementById("calendarToday").onclick=()=>{
+  scheduleCalendarDate=new Date();
+  drawCalendar();
+ };
+
+ drawCalendar();
+}
+
+/** Creates the 6-week calendar grid used by the Schedule tab. */
+function renderScheduleCalendar(events){
+ const calendar=document.getElementById("scheduleCalendar");
+ const title=document.getElementById("scheduleMonthTitle");
+ if(!calendar||!title)return;
+
+ const year=scheduleCalendarDate.getFullYear();
+ const month=scheduleCalendarDate.getMonth();
+ title.textContent=new Intl.DateTimeFormat(undefined,{
+  month:"long",year:"numeric"
+ }).format(new Date(year,month,1));
+
+ const first=new Date(year,month,1);
+ const start=new Date(year,month,1-first.getDay());
+ const today=new Date();
+
+ let output=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
+  .map(day=>`<div class="calendarWeekday">${day}</div>`)
+  .join("");
+
+ for(let offset=0;offset<42;offset+=1){
+  const date=new Date(start);
+  date.setDate(start.getDate()+offset);
+
+  const dayEvents=events.filter(event=>
+   event.date&&
+   event.date.getFullYear()===date.getFullYear()&&
+   event.date.getMonth()===date.getMonth()&&
+   event.date.getDate()===date.getDate()
+  );
+
+  const outside=date.getMonth()!==month;
+  const isToday=
+   date.getFullYear()===today.getFullYear()&&
+   date.getMonth()===today.getMonth()&&
+   date.getDate()===today.getDate();
+
+  output+=`<div class="calendarCell ${outside?"outside":""} ${isToday?"today":""}">
+   <div class="calendarDate">${date.getDate()}</div>
+   ${dayEvents.map(event=>`
+    <div class="calendarGame">
+     <button title="${escapeHtml(event.venue)}">
+      <strong>${escapeHtml(event.homeAway==="away"?"at":"vs.")} ${escapeHtml(event.opponent)}</strong>
+      <small>${event.date.toLocaleTimeString(undefined,{
+       hour:"numeric",minute:"2-digit"
+      })}</small>
+     </button>
+    </div>
+   `).join("")}
+  </div>`;
+ }
+
+ calendar.innerHTML=output;
+}
+function athleteList(data){
+ const out=[];
+ const walk=x=>{
+  if(!x||typeof x!=="object")return;
+  if(Array.isArray(x)){x.forEach(walk);return}
+  if((x.fullName||x.displayName)&&("position" in x||"jersey" in x||"age" in x))out.push(x);
+  Object.values(x).forEach(walk);
+ };walk(data);const seen=new Set();return out.filter(a=>{const k=a.id||a.uid||a.fullName||a.displayName;if(seen.has(k))return false;seen.add(k);return true});
+}
+function renderLiveRoster(b){
+ const players=athleteList(b.roster);
+ body.innerHTML=`${liveHeader(b)}<div class="panels"><section class="panel s12"><h3>Current roster</h3>${players.length?`<div class="tableWrap"><table class="dataTable"><thead><tr><th>No.</th><th>Player</th><th>Position</th><th>Age</th><th>Height / Weight</th></tr></thead><tbody>${players.map(p=>`<tr><td>${escapeHtml(p.jersey||"—")}</td><td><strong>${escapeHtml(p.fullName||p.displayName)}</strong></td><td>${escapeHtml(p.position?.displayName||p.position?.name||p.position?.abbreviation||"—")}</td><td>${escapeHtml(p.age||"—")}</td><td>${escapeHtml([p.displayHeight||p.height,p.displayWeight||p.weight].filter(Boolean).join(" / ")||"—")}</td></tr>`).join("")}</tbody></table></div>`:"<p>No roster was returned by this league feed.</p>"}</section></div>`;
+}
+/**
+ * Displays current player cards and allows each player to be starred.
+ */
+function renderLivePlayers(b){
+ const players=athleteList(b.roster).slice(0,60);
+ const teamName=current.node.name;
+
+ body.innerHTML=`${liveHeader(b)}
+  <div class="panels">
+   <section class="panel s12">
+    <h3>Players</h3>
+    ${players.length?`
+     <div class="playerGrid">
+      ${players.map((player,index)=>`
+       <article class="player">
+        <button
+         class="playerFavorite ${isFavoritePlayer(player,teamName)?"on":""}"
+         data-player-index="${index}"
+         title="Favorite player"
+        >★</button>
+        <h4>${escapeHtml(player.fullName||player.displayName)}</h4>
+        <p>${escapeHtml(player.position?.displayName||player.position?.abbreviation||"Player")}</p>
+        <p>No. ${escapeHtml(player.jersey||"—")} • Age ${escapeHtml(player.age||"—")}</p>
+        <p>${escapeHtml(player.experience?.displayValue||player.college?.name||"")}</p>
+       </article>
+      `).join("")}
+     </div>
+    `:"<p>No player profiles were returned.</p>"}
+   </section>
+  </div>`;
+
+ body.querySelectorAll("[data-player-index]").forEach(button=>{
+  button.onclick=()=>{
+   const player=players[Number(button.dataset.playerIndex)];
+   toggleFavoritePlayer(player,teamName);
+   button.classList.toggle("on",isFavoritePlayer(player,teamName));
+  };
+ });
+}
+function statRows(data){
+ const rows=[];
+ const walk=(x,category="")=>{
+  if(!x||typeof x!=="object")return;
+  if(Array.isArray(x)){x.forEach(v=>walk(v,category));return}
+  const cat=x.displayName||x.name||category;
+  if(Array.isArray(x.stats))x.stats.forEach(s=>rows.push([cat,s.displayName||s.name,s.displayValue??s.value??"—"]));
+  if(Array.isArray(x.statistics))x.statistics.forEach(s=>rows.push([cat,s.displayName||s.name,s.displayValue??s.value??"—"]));
+  Object.entries(x).forEach(([k,v])=>{if(!["stats","statistics"].includes(k))walk(v,cat)});
+ };walk(data);const seen=new Set();return rows.filter(r=>{const k=r.join("|");if(seen.has(k))return false;seen.add(k);return true}).slice(0,100);
+}
+function renderLiveStatistics(b){
+ const rows=statRows(b.statistics);
+ body.innerHTML=`${liveHeader(b)}<div class="panels"><section class="panel s12"><h3>Current team statistics</h3>${rows.length?`<div class="tableWrap"><table class="dataTable"><thead><tr><th>Category</th><th>Statistic</th><th>Value</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${escapeHtml(r[0])}</td><td><strong>${escapeHtml(r[1])}</strong></td><td>${escapeHtml(r[2])}</td></tr>`).join("")}</tbody></table></div>`:"<p>This league feed did not return a team-statistics table. The Overview and Schedule tabs still use current data.</p>"}</section></div>`;
+}
+function standingRows(data){
+ const rows=[];
+ const walk=x=>{
+  if(!x||typeof x!=="object")return;
+  if(Array.isArray(x)){x.forEach(walk);return}
+  if(x.team&&(x.team.displayName||x.team.name)){
+   const stats=(x.stats||[]).reduce((o,s)=>(o[s.shortDisplayName||s.name||s.abbreviation]=s.displayValue??s.value,o),{});
+   rows.push({name:x.team.displayName||x.team.name,stats});
+  }
+  Object.values(x).forEach(walk);
+ };walk(data);const seen=new Set();return rows.filter(r=>{if(seen.has(r.name))return false;seen.add(r.name);return true});
+}
+function renderLiveStandings(b){
+ const rows=standingRows(b.standings),keys=[...new Set(rows.flatMap(r=>Object.keys(r.stats)))].slice(0,6);
+ body.innerHTML=`${liveHeader(b)}<div class="panels"><section class="panel s12"><h3>Current standings</h3>
+    ${rows.length>=2?`
+     <div class="comparePanel" style="margin-bottom:15px">
+      <article class="compareTeam">
+       <strong>${escapeHtml(rows[0].name)}</strong>
+       <p>${escapeHtml(Object.values(rows[0].stats).slice(0,2).join(" • "))}</p>
+      </article>
+      <div class="compareVs">VS</div>
+      <article class="compareTeam">
+       <strong>${escapeHtml(rows[1].name)}</strong>
+       <p>${escapeHtml(Object.values(rows[1].stats).slice(0,2).join(" • "))}</p>
+      </article>
+     </div>
+    `:""}
+    ${rows.length?`<div class="tableWrap"><table class="dataTable"><thead><tr><th>Team</th>${keys.map(k=>`<th>${escapeHtml(k)}</th>`).join("")}</tr></thead><tbody>${rows.map(r=>`<tr style="${normalizeName(r.name).includes(normalizeName(cleanTeamName(current.node.name)))?"background:#4f9dff12":""}"><td><strong>${escapeHtml(r.name)}</strong></td>${keys.map(k=>`<td>${escapeHtml(r.stats[k]??"—")}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`:"<p>No standings table was returned for this competition.</p>"}</section></div>`;
+}
+function articles(data){
+ return data?.articles||data?.news||data?.headlines||[];
+}
+function renderLiveNews(b){
+ const a=articles(b.news).slice(0,30),q=encodeURIComponent(current.node.name);
+ body.innerHTML=`${liveHeader(b)}<div class="panels"><section class="panel s12"><h3>Current news</h3>${a.length?`<div class="articleGrid">${a.map(x=>`<article class="article"><h4>${escapeHtml(x.headline||x.title||"Sports update")}</h4><p>${escapeHtml(x.description||x.story||"")}</p><p>${x.published?new Date(x.published).toLocaleString():""}</p><a target="_blank" rel="noopener" href="${escapeHtml(x.links?.web?.href||x.link||x.url||"#")}">Read article ↗</a></article>`).join("")}</div>`:"<p>No articles were returned directly, so use the current links below.</p>"}<div class="links" style="margin-top:16px"><a class="link primary" target="_blank" rel="noopener" href="https://www.espn.com/search/_/q/${q}">View all on ESPN</a><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+official+team+news">Official news</a><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+injury+report">Injury report</a></div></section></div>`;
+}
+
+
+
+
+
+/* ================================================================
+   SPORT SEASON STATUS ENGINE
+
+   Arena no longer maintains a separate "In Season Now" list.
+   Instead, each top-level Explore Arena card receives one status:
+
+   - Preseason
+   - In season
+   - Postseason
+   - Off season
+
+   Off-season cards also display when activity is expected to begin
+   again. The rules below use broad calendar windows and are intended
+   as a navigation aid. Official schedules remain the source of truth.
+   ================================================================ */
+
+/**
+ * Returns YYYYMMDD as a number using the device's local date.
+ * August 1, 2026 becomes 20260801.
+ */
+function localDateNumber(date=new Date()){
+ return date.getFullYear()*10000+
+        (date.getMonth()+1)*100+
+        date.getDate();
+}
+
+/**
+ * Creates a date number without relying on UTC conversion.
+ */
+function seasonDate(year,month,day){
+ return year*10000+month*100+day;
+}
+
+/**
+ * Formats a future start as "Starts March 2027."
+ */
+function startLabel(monthName,year){
+ return`Starts ${monthName} ${year}`;
+}
+
+/**
+ * Determines the season phase for every top-level Arena category.
+ *
+ * The current year is used to create rolling season windows. Sports
+ * whose seasons cross New Year's Day check both the current campaign
+ * and the campaign that began in the previous calendar year.
+ */
+function getSportSeasonStatus(sportName,date=new Date()){
+ const current=localDateNumber(date);
+ const year=date.getFullYear();
+ const month=date.getMonth()+1;
+
+ const result=(status,detail,next="")=>({
+  status,
+  detail,
+  next,
+  className:{
+   "Preseason":"status-preseason",
+   "In season":"status-inseason",
+   "Postseason":"status-postseason",
+   "Off season":"status-offseason"
+  }[status]
+ });
+
+ const between=(value,start,end)=>value>=start&&value<=end;
+
+ switch(sportName){
+  case"MLB":
+   if(between(current,seasonDate(year,2,15),seasonDate(year,3,24)))return result("Preseason","Spring training");
+   if(between(current,seasonDate(year,3,25),seasonDate(year,9,27)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,9,28),seasonDate(year,10,31)))return result("Postseason","MLB postseason");
+   return result("Off season","No regular-season games",startLabel("March",month>=11?year+1:year));
+
+  case"MLS":
+   if(between(current,seasonDate(year,1,20),seasonDate(year,2,19)))return result("Preseason","Club preseason");
+   if(between(current,seasonDate(year,2,20),seasonDate(year,10,24)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,10,25),seasonDate(year,12,10)))return result("Postseason","MLS Cup Playoffs");
+   return result("Off season","League break",startLabel("February",year+1));
+
+  case"WNBA":
+   if(between(current,seasonDate(year,4,15),seasonDate(year,5,7)))return result("Preseason","Training camp and exhibitions");
+   if(between(current,seasonDate(year,5,8),seasonDate(year,9,20)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,9,21),seasonDate(year,10,31)))return result("Postseason","WNBA Playoffs");
+   return result("Off season","League break",startLabel("May",month>=11?year+1:year));
+
+  case"NWSL":
+   if(between(current,seasonDate(year,2,1),seasonDate(year,3,12)))return result("Preseason","Club preseason");
+   if(between(current,seasonDate(year,3,13),seasonDate(year,11,1)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,11,2),seasonDate(year,11,30)))return result("Postseason","NWSL Playoffs");
+   return result("Off season","League break",startLabel("March",year+1));
+
+  case"Formula 1":
+   if(between(current,seasonDate(year,2,1),seasonDate(year,3,5)))return result("Preseason","Testing and launches");
+   if(between(current,seasonDate(year,3,6),seasonDate(year,12,15)))return result("In season","Grand Prix season");
+   return result("Off season","Championship break",startLabel("March",year+1));
+
+  case"NASCAR":
+   if(between(current,seasonDate(year,1,15),seasonDate(year,2,13)))return result("Preseason","Preseason events");
+   if(between(current,seasonDate(year,2,14),seasonDate(year,8,30)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,8,31),seasonDate(year,11,8)))return result("Postseason","NASCAR Playoffs");
+   return result("Off season","Series break",startLabel("February",year+1));
+
+  case"NFL":{
+   const previousYear=year-1;
+   if(between(current,seasonDate(year,7,20),seasonDate(year,9,8)))return result("Preseason","Training camp and preseason games");
+   if(between(current,seasonDate(year,9,9),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,1,10)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,1,11),seasonDate(year,2,14)))return result("Postseason","NFL Playoffs");
+   return result("Off season","League offseason",startLabel("July",year));
+  }
+
+  case"College Football":
+   if(between(current,seasonDate(year,8,1),seasonDate(year,8,21)))return result("Preseason","Training camp");
+   if(between(current,seasonDate(year,8,22),seasonDate(year,12,12)))return result("In season","Regular season and conference championships");
+   if(between(current,seasonDate(year,12,13),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,1,20)))return result("Postseason","Bowls and College Football Playoff");
+   return result("Off season","College football offseason",startLabel("August",year));
+
+  case"Premier League":
+  case"Bundesliga":
+  case"La Liga":
+  case"Serie A":
+  case"Ligue 1":
+   if(between(current,seasonDate(year,7,1),seasonDate(year,8,20)))return result("Preseason","Summer friendlies and preparation");
+   if(between(current,seasonDate(year,8,21),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,5,31)))return result("In season","Domestic league season");
+   return result("Off season","Summer break",startLabel("August",year));
+
+  case"Champions League":
+   if(between(current,seasonDate(year,6,15),seasonDate(year,7,7)))return result("Preseason","Qualification preparation");
+   if(between(current,seasonDate(year,7,8),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,6,14)))return result("In season","Qualifying, league phase, or knockout rounds");
+   return result("Off season","European competition break",startLabel("July",year));
+
+  case"NBA":
+   if(between(current,seasonDate(year,10,1),seasonDate(year,10,20)))return result("Preseason","NBA preseason");
+   if(between(current,seasonDate(year,10,21),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,4,12)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,4,13),seasonDate(year,6,30)))return result("Postseason","NBA Playoffs");
+   return result("Off season","League offseason",startLabel("October",year));
+
+  case"NHL":
+   if(between(current,seasonDate(year,9,15),seasonDate(year,10,7)))return result("Preseason","NHL preseason");
+   if(between(current,seasonDate(year,10,8),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,4,16)))return result("In season","Regular season");
+   if(between(current,seasonDate(year,4,17),seasonDate(year,6,30)))return result("Postseason","Stanley Cup Playoffs");
+   return result("Off season","League offseason",startLabel("September",year));
+
+  case"College Basketball / March Madness":
+   if(between(current,seasonDate(year,10,1),seasonDate(year,11,1)))return result("Preseason","Practices and exhibitions");
+   if(between(current,seasonDate(year,11,2),seasonDate(year,12,31))||
+      between(current,seasonDate(year,1,1),seasonDate(year,3,14)))return result("In season","Regular season and conference tournaments");
+   if(between(current,seasonDate(year,3,15),seasonDate(year,4,10)))return result("Postseason","March Madness");
+   return result("Off season","College basketball offseason",startLabel("November",year));
+
+  case"College Baseball":
+   if(between(current,seasonDate(year,1,15),seasonDate(year,2,12)))return result("Preseason","Team preparation");
+   if(between(current,seasonDate(year,2,13),seasonDate(year,5,31)))return result("In season","Regular season and conference tournaments");
+   if(between(current,seasonDate(year,6,1),seasonDate(year,6,30)))return result("Postseason","NCAA Tournament and College World Series");
+   return result("Off season","College baseball offseason",startLabel("February",month>=7?year+1:year));
+
+  case"College Softball":
+   if(between(current,seasonDate(year,1,15),seasonDate(year,2,4)))return result("Preseason","Team preparation");
+   if(between(current,seasonDate(year,2,5),seasonDate(year,5,17)))return result("In season","Regular season and conference tournaments");
+   if(between(current,seasonDate(year,5,18),seasonDate(year,6,10)))return result("Postseason","NCAA Tournament and WCWS");
+   return result("Off season","College softball offseason",startLabel("February",month>=7?year+1:year));
+
+  case"Olympics":
+   if(between(current,20280701,20280713))return result("Preseason","Final preparation for LA28");
+   if(between(current,20280714,20280730))return result("In season","Los Angeles 2028 Olympic Games");
+   return result("Off season","No Olympic Games underway","Starts July 2028");
+
+  case"International Soccer":
+   return result("In season","National-team competitions and windows occur throughout the year");
+
+  case"Rugby":
+   return result("In season","Different rugby competitions run across the calendar year");
+
+  default:
+   return result("Off season","Status calendar not configured","Check the live schedule");
+ }
+}
+
+/**
+ * Creates the status badge shown only on top-level Explore cards.
+ */
+function sportStatusHtml(node,isTopLevel){
+ if(!isTopLevel||node.type==="team"){
+  return"";
+ }
+
+ const phase=getSportSeasonStatus(node.name);
+
+ return`
+  <div class="sportStatus ${phase.className}">
+   ${escapeHtml(phase.status)}
+  </div>
+  <div class="statusNext">
+   ${escapeHtml(phase.detail)}
+   ${phase.next?`<br><strong>${escapeHtml(phase.next)}</strong>`:""}
+  </div>`;
+}
+
+/* ================================================================
+   FAVORITES-ONLY TIMELINE
+   ================================================================ */
+
+/**
+ * Resolves all favorited team paths, loads each team's schedule,
+ * and combines the next events into one chronological timeline.
+ *
+ * The timeline intentionally ignores non-favorite teams.
+ */
+async function renderFavoriteTimeline(forceRefresh=false){
+ const favoriteTeams=favs.map(resolve).filter(item=>
+  item&&item.node.type==="team"
+ );
+
+ timelineWrap.classList.toggle("hidden",favoriteTeams.length===0);
+
+ if(!favoriteTeams.length){
+  timelineList.innerHTML="";
+  return;
+ }
+
+ timelineList.innerHTML=`
+  <div class="loading">
+   <div class="spinner"></div>
+   <strong>Loading favorite schedules…</strong>
+  </div>`;
+
+ const previousCurrent=current;
+ const collected=[];
+
+ for(const favorite of favoriteTeams){
+  try{
+   current={node:favorite.node,path:favorite.path};
+
+   const bundle=await loadBundle();
+   const events=extractEvents(bundle.schedule)
+    .map(event=>eventInfo(event,bundle.resolved.team.id))
+    .filter(event=>event.date&&event.date>=new Date(Date.now()-86400000))
+    .slice(0,8);
+
+   events.forEach(event=>{
+    collected.push({
+     ...event,
+     team:favorite.node.name,
+     path:favorite.path
+    });
+   });
+  }catch(error){
+   console.warn("Timeline could not load:",favorite.node.name,error);
+  }
+ }
+
+ current=previousCurrent;
+
+ collected.sort((a,b)=>a.date-b.date);
+
+ if(!collected.length){
+  timelineList.innerHTML=`
+   <div class="timelineEmpty">
+    No upcoming events were returned for your favorite teams.
+   </div>`;
+  return;
+ }
+
+ const byDay={};
+
+ collected.slice(0,30).forEach(event=>{
+  const day=event.date.toLocaleDateString(undefined,{
+   weekday:"long",month:"long",day:"numeric"
+  });
+
+  if(!byDay[day])byDay[day]=[];
+  byDay[day].push(event);
+ });
+
+ timelineList.innerHTML=Object.entries(byDay).map(([day,events])=>`
+  <section class="timelineDay">
+   <h3>${escapeHtml(day)}</h3>
+   ${events.map(event=>`
+    <article class="timelineEvent">
+     <div class="timelineTime">
+      ${event.date.toLocaleTimeString(undefined,{
+       hour:"numeric",minute:"2-digit"
+      })}
+     </div>
+     <div>
+      <strong>${escapeHtml(event.team)}</strong>
+      <small>${escapeHtml(event.homeAway==="away"?"at":"vs.")} ${escapeHtml(event.opponent)}</small>
+     </div>
+     <div class="timelineStatus">
+      ${escapeHtml(event.score||event.status)}
+      ${event.venue?`<small>${escapeHtml(event.venue)}</small>`:""}
+     </div>
+    </article>
+   `).join("")}
+  </section>
+ `).join("");
+}
+
+/* ================================================================
+   FAVORITE PLAYERS
+   ================================================================ */
+
+/** Builds a stable ID for a player within a particular team. */
+function playerKey(player,teamName){
+ return `${normalizeName(teamName)}:${player.id||normalizeName(player.fullName||player.displayName)}`;
+}
+
+/** Returns true when a player is already starred. */
+function isFavoritePlayer(player,teamName){
+ const id=playerKey(player,teamName);
+ return favoritePlayers.some(item=>item.id===id);
+}
+
+/**
+ * Adds or removes a player from the favorites list.
+ * Only simple display data is stored, not an entire API response.
+ */
+function toggleFavoritePlayer(player,teamName){
+ const id=playerKey(player,teamName);
+ const index=favoritePlayers.findIndex(item=>item.id===id);
+
+ if(index>=0){
+  favoritePlayers.splice(index,1);
+ }else{
+  favoritePlayers.push({
+   id,
+   name:player.fullName||player.displayName||"Unknown player",
+   team:teamName,
+   position:player.position?.displayName||
+            player.position?.name||
+            player.position?.abbreviation||
+            "Player"
+  });
+ }
+
+ saveFavoritePlayers();
+ renderFavoritePlayers();
+}
+
+/** Draws the Favorite Players row on Arena's homepage. */
+function renderFavoritePlayers(){
+ favoritePlayerWrap.classList.toggle("hidden",favoritePlayers.length===0);
+
+ favoritePlayerGrid.innerHTML=favoritePlayers.map(player=>`
+  <button class="favoritePlayerChip">
+   <strong>★ ${escapeHtml(player.name)}</strong>
+   <span>${escapeHtml(player.team)} • ${escapeHtml(player.position)}</span>
+  </button>
+ `).join("");
+}
+
+/* ================================================================
+   SAVED GAMES
+   ================================================================ */
+
+/** Creates a reusable ID for one scheduled game. */
+function savedGameKey(game){
+ return[
+  current?.node?.name||"",
+  game.date?.toISOString?.()||game.date||"",
+  game.opponent||game.name||""
+ ].join("|");
+}
+
+/** Adds or removes one game from the user's saved-game list. */
+function toggleSavedGame(game){
+ const id=savedGameKey(game);
+ const index=savedGames.findIndex(item=>item.id===id);
+
+ if(index>=0){
+  savedGames.splice(index,1);
+ }else{
+  savedGames.push({
+   id,
+   team:current?.node?.name||"",
+   opponent:game.opponent||game.name||"Opponent",
+   date:game.date?.toISOString?.()||game.date||"",
+   venue:game.venue||"",
+   status:game.status||"",
+   score:game.score||""
+  });
+ }
+
+ saveSavedGames();
+ renderTab();
+}
+
+function isSavedGame(game){
+ return savedGames.some(item=>item.id===savedGameKey(game));
+}
+
+/* ================================================================
+   POSTSEASON DATA
+
+   ESPN scoreboard feeds usually label postseason games with
+   seasonType=3. Arena requests a complete postseason scoreboard and
+   groups games by round. When a league does not expose a complete
+   bracket, the tab still shows the returned postseason schedule.
+   ================================================================ */
+
+/**
+ * Returns a useful season year for tournament requests.
+ *
+ * College basketball tournaments played in March use the calendar
+ * year in which the tournament ends.
+ */
+function postseasonYear(){
+ return new Date().getFullYear();
+}
+
+/**
+ * Downloads postseason events for the active competition.
+ */
+async function loadPostseasonEvents(customLeague=null){
+ const config=customLeague||leagueConfig();
+
+ if(!config){
+  throw new Error("No postseason feed is configured for this selection.");
+ }
+
+ const year=postseasonYear();
+ const cacheKey=`postseason/${config.sport}/${config.league}/${year}`;
+
+ if(liveCache.has(cacheKey)){
+  return liveCache.get(cacheKey);
+ }
+
+ const url=`${apiBase(config)}/scoreboard?dates=${year}&seasontype=3&limit=500`;
+ const data=await getJson(url);
+ const events=data.events||[];
+
+ liveCache.set(cacheKey,events);
+ return events;
+}
+
+/**
+ * Tries to identify the tournament round from the event metadata.
+ */
+function postseasonRoundName(event){
+ const competition=event.competitions?.[0]||{};
+ const notes=[
+  ...(competition.notes||[]).map(note=>note.headline),
+  event.season?.slug,
+  event.week?.text,
+  event.status?.type?.description
+ ].filter(Boolean);
+
+ const text=notes.join(" ");
+
+ const knownRounds=[
+  "First Four","Opening Round","First Round","Round of 64",
+  "Second Round","Round of 32","Sweet 16","Elite Eight",
+  "Final Four","National Championship","Wild Card",
+  "Divisional Round","Conference Championship","Super Bowl",
+  "Play-In","First Round","Conference Semifinals",
+  "Conference Finals","NBA Finals","WNBA Finals",
+  "Stanley Cup Final","Division Series","Championship Series",
+  "World Series","Round of 16","Quarterfinal","Semifinal","Final",
+  "Regional","Super Regional","Women's College World Series",
+  "College World Series","Round of 12","Round of 8","Championship 4"
+ ];
+
+ return knownRounds.find(round=>
+  text.toLowerCase().includes(round.toLowerCase())
+ )||competition.type?.text||event.week?.text||"Postseason";
+}
+
+/**
+ * Converts one scoreboard event into a reusable bracket matchup.
+ */
+function bracketMatchup(event){
+ const competition=event.competitions?.[0]||{};
+ const competitors=competition.competitors||[];
+
+ const entries=competitors.map(item=>({
+  name:item.team?.displayName||item.athlete?.displayName||"TBD",
+  seed:item.curatedRank?.current||item.seed||"",
+  score:item.score||"",
+  winner:Boolean(item.winner)
+ }));
+
+ return{
+  entries,
+  date:event.date?new Date(event.date):null,
+  status:event.status?.type?.shortDetail||
+         event.status?.type?.detail||
+         event.status?.type?.description||
+         "Scheduled",
+  venue:competition.venue?.fullName||"",
+  round:postseasonRoundName(event)
+ };
+}
+
+/**
+ * Renders a general postseason schedule grouped by playoff round.
+ */
+async function renderPostseason(bundle){
+ loading("Loading postseason information");
+
+ try{
+  const events=await loadPostseasonEvents();
+
+  if(!events.length){
+   body.innerHTML=`${liveHeader(bundle)}
+    <div class="panels">
+     <section class="panel s12">
+      <h3>Postseason</h3>
+      <p>No postseason games were returned for the current season.
+      This can happen before the playoff field is announced or when a
+      competition uses a different tournament feed.</p>
+     </section>
+    </div>`;
+   return;
+  }
+
+  const matchups=events.map(bracketMatchup);
+  const groups={};
+
+  matchups.forEach(match=>{
+   if(!groups[match.round])groups[match.round]=[];
+   groups[match.round].push(match);
+  });
+
+  const rounds=Object.entries(groups);
+
+  body.innerHTML=`${liveHeader(bundle)}
+   <div class="panels">
+    <section class="panel s12">
+     <h3>Postseason</h3>
+     <p>Games are grouped using the round information supplied by the
+     current competition feed.</p>
+     <div class="bracketScroll">
+      <div class="bracket">
+       ${rounds.map(([round,games])=>`
+        <section class="bracketRound">
+         <h4>${escapeHtml(round)}</h4>
+         ${games.map(match=>renderBracketMatchup(match)).join("")}
+        </section>
+       `).join("")}
+      </div>
+     </div>
+    </section>
+   </div>`;
+ }catch(error){
+  apiError(error);
+ }
+}
+
+/**
+ * Renders one game card inside a postseason bracket column.
+ */
+function renderBracketMatchup(match){
+ return`<article class="matchup">
+  ${match.entries.map(entry=>`
+   <div class="matchTeam ${entry.winner?"winner":""}">
+    <span class="seed">${escapeHtml(entry.seed||"—")}</span>
+    <strong>${escapeHtml(entry.name)}</strong>
+    <span>${escapeHtml(entry.score)}</span>
+   </div>
+  `).join("")}
+  <div class="matchMeta">
+   ${match.date?match.date.toLocaleString():"Date TBD"}
+   ${match.venue?` • ${escapeHtml(match.venue)}`:""}
+   <br>${escapeHtml(match.status)}
+  </div>
+ </article>`;
+}
+
+/**
+ * Loads and renders the men's or women's NCAA tournament.
+ *
+ * Arena determines which tournament to use from the selected path.
+ */
+async function renderMarchMadness(bundle){
+ loading("Loading March Madness bracket");
+
+ try{
+  const women=current.path.some(item=>item.name.includes("Women's"));
+  const tournamentConfig={
+   sport:"basketball",
+   league:women?"womens-college-basketball":"mens-college-basketball"
+  };
+
+  const events=await loadPostseasonEvents(tournamentConfig);
+
+  if(!events.length){
+   body.innerHTML=`${liveHeader(bundle)}
+    <div class="panels">
+     <section class="panel s12">
+      <h3>March Madness</h3>
+      <p>The tournament field or schedule is not currently available
+      from the selected feed.</p>
+     </section>
+    </div>`;
+   return;
+  }
+
+  const desiredOrder=[
+   "First Four","Opening Round","First Round","Round of 64",
+   "Second Round","Round of 32","Sweet 16","Elite Eight",
+   "Final Four","National Championship"
+  ];
+
+  const grouped={};
+
+  events.map(bracketMatchup).forEach(match=>{
+   if(!grouped[match.round])grouped[match.round]=[];
+   grouped[match.round].push(match);
+  });
+
+  const rounds=Object.entries(grouped).sort((a,b)=>{
+   const ai=desiredOrder.findIndex(name=>
+    a[0].toLowerCase().includes(name.toLowerCase())
+   );
+   const bi=desiredOrder.findIndex(name=>
+    b[0].toLowerCase().includes(name.toLowerCase())
+   );
+
+   return(ai<0?999:ai)-(bi<0?999:bi);
+  });
+
+  body.innerHTML=`${liveHeader(bundle)}
+   <div class="panels">
+    <section class="panel s12">
+     <h3>${women?"Women's":"Men's"} March Madness</h3>
+     <p>Scroll horizontally to follow the tournament from the opening
+     games through the national championship.</p>
+     <div class="bracketScroll">
+      <div class="bracket">
+       ${rounds.map(([round,games])=>`
+        <section class="bracketRound">
+         <h4>${escapeHtml(round)}</h4>
+         ${games.map(match=>renderBracketMatchup(match)).join("")}
+        </section>
+       `).join("")}
+      </div>
+     </div>
+    </section>
+   </div>`;
+ }catch(error){
+  apiError(error);
+ }
+}
+
+function renderFallbackNews(err){
+ const q=encodeURIComponent(current.node.name);
+ body.innerHTML=`<div class="panels"><section class="panel s12"><h3>Current news links</h3><p>${escapeHtml(err.message||"A direct team feed is not available for this subject.")}</p><div class="links"><a class="link primary" target="_blank" rel="noopener" href="https://www.espn.com/search/_/q/${q}">View on ESPN</a><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+latest+news">Latest news</a><a class="link" target="_blank" rel="noopener" href="https://www.google.com/search?q=${q}+schedule+results">Schedule and results</a></div></section></div>`;
+}
+search.oninput=e=>{let q=e.target.value.trim().toLowerCase();if(!q){render();return}show(IDX.filter(x=>x.node.name.toLowerCase().includes(q)).slice(0,100),true)}
+/**
+ * Returns to the exact directory position saved before opening the
+ * team page. requestAnimationFrame waits for the directory layout to
+ * return before restoring the previous scroll coordinate.
+ */
+back.onclick=()=>{
+ team.classList.add("hidden");
+ browser.classList.remove("hidden");
+ current=null;
+ render();
+
+ requestAnimationFrame(()=>{
+  window.scrollTo({
+   top:directoryScrollPosition,
+   behavior:"auto"
+  });
+ });
+};teamStar.onclick=()=>toggle(current.path);home.onclick=()=>{if(current)back.click();path=[];search.value="";render()};favOnly.onclick=()=>{if(current)back.click();path=[];crumbs();show(favs.map(resolve).filter(x=>x&&x.node.type==="team"),true);title.textContent="Favorite teams";subtitle.textContent="Saved on this browser."};
+/* ================================================================
+   THEME PREFERENCE
+
+   Arena stores the user's choice in localStorage. On the first visit,
+   there is no saved preference, so the app uses dark mode.
+   ================================================================ */
+
+const THEME_KEY="arenaThemeV1";
+
+/**
+ * Returns the saved theme. Only "light" is treated as light mode;
+ * every other value falls back safely to Arena's dark default.
+ */
+function loadTheme(){
+ return localStorage.getItem(THEME_KEY)==="light"?"light":"dark";
+}
+
+/**
+ * Applies a theme to the body and updates the header button.
+ */
+function applyTheme(themeName){
+ const light=themeName==="light";
+
+ document.body.dataset.theme=light?"light":"dark";
+ document.getElementById("themeIcon").textContent=light?"☀":"☾";
+ document.getElementById("themeLabel").textContent=light?"Light":"Dark";
+ document.getElementById("themeToggle").title=
+  light?"Switch to dark theme":"Switch to light theme";
+}
+
+/**
+ * Switches themes and remembers the new preference.
+ */
+function toggleTheme(){
+ const next=document.body.dataset.theme==="light"?"dark":"light";
+ localStorage.setItem(THEME_KEY,next);
+ applyTheme(next);
+}
+
+document.getElementById("themeToggle").addEventListener("click",toggleTheme);
+document.getElementById("refreshTimeline").addEventListener("click",()=>{
+ renderFavoriteTimeline(true);
+});
+applyTheme(loadTheme());
+
+render();
+</script></body></html>
